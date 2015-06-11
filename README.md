@@ -1,2 +1,2 @@
-# Aspose_Total_Cloud
-Aspose.Total for Cloud examples and plugins.
+# Aspose.Total for Cloud
+Aspose.Total for Cloud examples and SDKs.
