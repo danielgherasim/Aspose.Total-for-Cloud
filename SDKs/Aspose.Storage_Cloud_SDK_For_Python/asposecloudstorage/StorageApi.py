@@ -47,19 +47,19 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'versionId' in allParams and allParams['versionId']:
+        if 'versionId' in allParams and allParams['versionId'] is not None:
             resourcePath = resourcePath.replace("{" + "versionId" + "}" , str(allParams['versionId']))
         else:
             resourcePath = re.sub("[&?]versionId.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
@@ -119,7 +119,7 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
@@ -183,19 +183,19 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'versionId' in allParams and allParams['versionId']:
+        if 'versionId' in allParams and allParams['versionId'] is not None:
             resourcePath = resourcePath.replace("{" + "versionId" + "}" , str(allParams['versionId']))
         else:
             resourcePath = re.sub("[&?]versionId.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
@@ -259,19 +259,19 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'versionId' in allParams and allParams['versionId']:
+        if 'versionId' in allParams and allParams['versionId'] is not None:
             resourcePath = resourcePath.replace("{" + "versionId" + "}" , str(allParams['versionId']))
         else:
             resourcePath = re.sub("[&?]versionId.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
@@ -333,13 +333,13 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
@@ -407,31 +407,31 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'src' in allParams and allParams['src']:
+        if 'src' in allParams and allParams['src'] is not None:
             resourcePath = resourcePath.replace("{" + "src" + "}" , str(allParams['src']))
         else:
             resourcePath = re.sub("[&?]src.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'dest' in allParams and allParams['dest']:
+        if 'dest' in allParams and allParams['dest'] is not None:
             resourcePath = resourcePath.replace("{" + "dest" + "}" , str(allParams['dest']))
         else:
             resourcePath = re.sub("[&?]dest.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'versionId' in allParams and allParams['versionId']:
+        if 'versionId' in allParams and allParams['versionId'] is not None:
             resourcePath = resourcePath.replace("{" + "versionId" + "}" , str(allParams['versionId']))
         else:
             resourcePath = re.sub("[&?]versionId.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'destStorage' in allParams and allParams['destStorage']:
+        if 'destStorage' in allParams and allParams['destStorage'] is not None:
             resourcePath = resourcePath.replace("{" + "destStorage" + "}" , str(allParams['destStorage']))
         else:
             resourcePath = re.sub("[&?]destStorage.*?(?=&|\\?|$)", "", resourcePath)
@@ -501,31 +501,31 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'newdest' in allParams and allParams['newdest']:
+        if 'newdest' in allParams and allParams['newdest'] is not None:
             resourcePath = resourcePath.replace("{" + "newdest" + "}" , str(allParams['newdest']))
         else:
             resourcePath = re.sub("[&?]newdest.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'versionId' in allParams and allParams['versionId']:
+        if 'versionId' in allParams and allParams['versionId'] is not None:
             resourcePath = resourcePath.replace("{" + "versionId" + "}" , str(allParams['versionId']))
         else:
             resourcePath = re.sub("[&?]versionId.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'destStorage' in allParams and allParams['destStorage']:
+        if 'destStorage' in allParams and allParams['destStorage'] is not None:
             resourcePath = resourcePath.replace("{" + "destStorage" + "}" , str(allParams['destStorage']))
         else:
             resourcePath = re.sub("[&?]destStorage.*?(?=&|\\?|$)", "", resourcePath)
@@ -591,19 +591,19 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'versionId' in allParams and allParams['versionId']:
+        if 'versionId' in allParams and allParams['versionId'] is not None:
             resourcePath = resourcePath.replace("{" + "versionId" + "}" , str(allParams['versionId']))
         else:
             resourcePath = re.sub("[&?]versionId.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
@@ -667,19 +667,19 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'recursive' in allParams and allParams['recursive']:
+        if 'recursive' in allParams and allParams['recursive'] is not None:
             resourcePath = resourcePath.replace("{" + "recursive" + "}" , str(allParams['recursive']))
         else:
             resourcePath = re.sub("[&?]recursive.*?(?=&|\\?|$)", "", resourcePath)
@@ -741,13 +741,13 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
@@ -813,25 +813,25 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'src' in allParams and allParams['src']:
+        if 'src' in allParams and allParams['src'] is not None:
             resourcePath = resourcePath.replace("{" + "src" + "}" , str(allParams['src']))
         else:
             resourcePath = re.sub("[&?]src.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'dest' in allParams and allParams['dest']:
+        if 'dest' in allParams and allParams['dest'] is not None:
             resourcePath = resourcePath.replace("{" + "dest" + "}" , str(allParams['dest']))
         else:
             resourcePath = re.sub("[&?]dest.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'destStorage' in allParams and allParams['destStorage']:
+        if 'destStorage' in allParams and allParams['destStorage'] is not None:
             resourcePath = resourcePath.replace("{" + "destStorage" + "}" , str(allParams['destStorage']))
         else:
             resourcePath = re.sub("[&?]destStorage.*?(?=&|\\?|$)", "", resourcePath)
@@ -897,25 +897,25 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'newdest' in allParams and allParams['newdest']:
+        if 'newdest' in allParams and allParams['newdest'] is not None:
             resourcePath = resourcePath.replace("{" + "newdest" + "}" , str(allParams['newdest']))
         else:
             resourcePath = re.sub("[&?]newdest.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'destStorage' in allParams and allParams['destStorage']:
+        if 'destStorage' in allParams and allParams['destStorage'] is not None:
             resourcePath = resourcePath.replace("{" + "destStorage" + "}" , str(allParams['destStorage']))
         else:
             resourcePath = re.sub("[&?]destStorage.*?(?=&|\\?|$)", "", resourcePath)
@@ -979,19 +979,19 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'Path' in allParams and allParams['Path']:
+        if 'Path' in allParams and allParams['Path'] is not None:
             resourcePath = resourcePath.replace("{" + "Path" + "}" , str(allParams['Path']))
         else:
             resourcePath = re.sub("[&?]Path.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'storage' in allParams and allParams['storage']:
+        if 'storage' in allParams and allParams['storage'] is not None:
             resourcePath = resourcePath.replace("{" + "storage" + "}" , str(allParams['storage']))
         else:
             resourcePath = re.sub("[&?]storage.*?(?=&|\\?|$)", "", resourcePath)
         
 
-        if 'destStorage' in allParams and allParams['destStorage']:
+        if 'destStorage' in allParams and allParams['destStorage'] is not None:
             resourcePath = resourcePath.replace("{" + "destStorage" + "}" , str(allParams['destStorage']))
         else:
             resourcePath = re.sub("[&?]destStorage.*?(?=&|\\?|$)", "", resourcePath)
@@ -1051,7 +1051,7 @@ class StorageApi(object):
     
         resourcePath = resourcePath.replace('&amp;','&').replace("/?","?").replace("toFormat={toFormat}","format={format}").replace("{path}","{Path}")
 
-        if 'name' in allParams and allParams['name']:
+        if 'name' in allParams and allParams['name'] is not None:
             resourcePath = resourcePath.replace("{" + "name" + "}" , str(allParams['name']))
         else:
             resourcePath = re.sub("[&?]name.*?(?=&|\\?|$)", "", resourcePath)

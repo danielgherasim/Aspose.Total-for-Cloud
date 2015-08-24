@@ -287,11 +287,17 @@ class ApiClient(object):
 
         # Have to accept objClass as string or actual type. Type could be a
         # native Python type, or one of the model classes.
+        if obj == None:
+            return
+         
         if type(objClass) == str:
             if 'list[' in objClass:
                 match = re.match('list\[(.*)\]', objClass)
                 subClass = match.group(1)
-                return [self.deserialize(subObj, subClass) for subObj in obj]
+                if obj is not None:
+                    return [self.deserialize(subObj, subClass) for subObj in obj]
+                else:
+                    return;
 
             if (objClass in ['int', 'float', 'long', 'dict', 'list', 'str', 'bool', 'datetime']):
                 objClass = eval(objClass)
