@@ -12,7 +12,7 @@ class MoveFolderResponse(object):
           attributeMap (dict): The key is attribute name and the value is json key in definition.
         """
         self.swaggerTypes = {
-            'Code': 'str',
+            'Code': 'int',
             'Status': 'str'
 
         }
@@ -20,6 +20,6 @@ class MoveFolderResponse(object):
         self.attributeMap = {
             'Code': 'Code','Status': 'Status'}       
 
-        self.Code = None # str
+        self.Code = None # int
         self.Status = None # str
         

@@ -13,7 +13,7 @@ class StorageExistResponse(object):
         """
         self.swaggerTypes = {
             'IsExist': 'bool',
-            'Code': 'str',
+            'Code': 'int',
             'Status': 'str'
 
         }
@@ -22,6 +22,6 @@ class StorageExistResponse(object):
             'IsExist': 'IsExist','Code': 'Code','Status': 'Status'}       
 
         self.IsExist = None # bool
-        self.Code = None # str
+        self.Code = None # int
         self.Status = None # str
         

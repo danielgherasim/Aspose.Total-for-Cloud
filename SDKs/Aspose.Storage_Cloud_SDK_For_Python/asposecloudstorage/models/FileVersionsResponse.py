@@ -13,7 +13,7 @@ class FileVersionsResponse(object):
         """
         self.swaggerTypes = {
             'FileVersions': 'list[FileVersion]',
-            'Code': 'str',
+            'Code': 'int',
             'Status': 'str'
 
         }
@@ -22,6 +22,6 @@ class FileVersionsResponse(object):
             'FileVersions': 'FileVersions','Code': 'Code','Status': 'Status'}       
 
         self.FileVersions = None # list[FileVersion]
-        self.Code = None # str
+        self.Code = None # int
         self.Status = None # str
         

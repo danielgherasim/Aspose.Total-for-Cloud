@@ -13,7 +13,7 @@ class DiscUsageResponse(object):
         """
         self.swaggerTypes = {
             'DiscUsage': 'DiscUsage',
-            'Code': 'str',
+            'Code': 'int',
             'Status': 'str'
 
         }
@@ -22,6 +22,6 @@ class DiscUsageResponse(object):
             'DiscUsage': 'DiscUsage','Code': 'Code','Status': 'Status'}       
 
         self.DiscUsage = None # DiscUsage
-        self.Code = None # str
+        self.Code = None # int
         self.Status = None # str
         

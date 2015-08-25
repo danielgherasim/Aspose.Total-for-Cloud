@@ -13,7 +13,7 @@ class FileExistResponse(object):
         """
         self.swaggerTypes = {
             'FileExist': 'FileExist',
-            'Code': 'str',
+            'Code': 'int',
             'Status': 'str'
 
         }
@@ -22,6 +22,6 @@ class FileExistResponse(object):
             'FileExist': 'FileExist','Code': 'Code','Status': 'Status'}       
 
         self.FileExist = None # FileExist
-        self.Code = None # str
+        self.Code = None # int
         self.Status = None # str
         

@@ -13,15 +13,17 @@ class ResponseMessage(object):
         """
         self.swaggerTypes = {
             'Code': 'int',
+            'Message': 'str',
+            'InputStream': 'str',
             'Status': 'str',
-            'Message': 'str'
+
         }
 
         self.attributeMap = {
-            'Code': 'Code','Message': 'Message','Status':'Status'}
+            'Code': 'Code','Message': 'Message','InputStream':'InputStream','Status':'Status'}
 
         self.Code = None # int
         self.Message = None # str
-        self.Status = None # str
         self.InputStream = None # str
+        self.Status = None # str
         
