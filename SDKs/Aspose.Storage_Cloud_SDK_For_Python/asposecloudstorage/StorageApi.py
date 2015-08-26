@@ -721,7 +721,7 @@ class StorageApi(object):
 
             
 
-        Returns: ResponseMessage
+        Returns: FilesResponse
         """
 
         allParams = dict.fromkeys(['Path', 'storage'])
@@ -769,7 +769,7 @@ class StorageApi(object):
 
         try:
             if response.status_code in [200,201,202]:
-                responseObject = self.apiClient.pre_deserialize(response.content, 'ResponseMessage', response.headers['content-type'])
+                responseObject = self.apiClient.pre_deserialize(response.content, 'FilesResponse', response.headers['content-type'])
                 return responseObject
             else:
                 raise ApiException(response.status_code,response.content)
