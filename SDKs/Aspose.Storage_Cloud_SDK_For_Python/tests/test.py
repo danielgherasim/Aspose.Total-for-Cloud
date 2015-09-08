@@ -2,18 +2,18 @@ import unittest
 import os.path
 import json
 
-from asposecloudstorage.ApiClient import ApiClient
-from asposecloudstorage.StorageApi import StorageApi
-from asposecloudstorage.ApiClient import ApiException
-from asposecloudstorage.models import ResponseMessage
-from asposecloudstorage.models import DiscUsageResponse
-from asposecloudstorage.models import FileExistResponse
-from asposecloudstorage.models import MoveFileResponse
-from asposecloudstorage.models import MoveFolderResponse
-from asposecloudstorage.models import StorageExistResponse
-from asposecloudstorage.models import FileVersionsResponse
-from asposecloudstorage.models import RemoveFolderResponse
-from asposecloudstorage.models import RemoveFileResponse
+from asposestoragecloud.ApiClient import ApiClient
+from asposestoragecloud.StorageApi import StorageApi
+from asposestoragecloud.ApiClient import ApiException
+from asposestoragecloud.models import ResponseMessage
+from asposestoragecloud.models import DiscUsageResponse
+from asposestoragecloud.models import FileExistResponse
+from asposestoragecloud.models import MoveFileResponse
+from asposestoragecloud.models import MoveFolderResponse
+from asposestoragecloud.models import StorageExistResponse
+from asposestoragecloud.models import FileVersionsResponse
+from asposestoragecloud.models import RemoveFolderResponse
+from asposestoragecloud.models import RemoveFileResponse
 
 class TestAsposeStorage(unittest.TestCase):
 
