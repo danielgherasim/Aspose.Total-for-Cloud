@@ -349,25 +349,25 @@
 
 ///
 /// Upload a specific file. Parameters: path - source file path e.g. /file.ext, versionID - source file's version, storage - user's source storage name, newdest - destination file path, destStorage - user's destination storage name.
-/// 
-///  @param path 
+///
+///  @param path
 ///
 ///  @param file file to upload
 ///
-///  @param versionId 
+///  @param versionId
 ///
-///  @param storage 
+///  @param storage
 ///
 ///  @returns ASPBaseResponse*
 ///
 -(NSNumber*) putCreateWithCompletionBlock: (NSString*) path
-         file: (NSURL*) file
-         versionId: (NSString*) versionId
-         storage: (NSString*) storage
-        
-        completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock { 
-        
+                                     file: (NSURL*) file
+                                versionId: (NSString*) versionId
+                                  storage: (NSString*) storage
 
+                        completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock {
+    
+    
     
     // verify the required parameter 'path' is set
     if (path == nil) {
@@ -377,6 +377,123 @@
     // verify the required parameter 'file' is set
     if (file == nil) {
         [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `file` when calling `putCreate`"];
+    }
+    
+    
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/storage/file/{path}"];
+    
+    // remove format in URL if needed
+    if ([resourcePath rangeOfString:@".{format}"].location != NSNotFound) {
+        [resourcePath replaceCharactersInRange: [resourcePath rangeOfString:@".{format}"] withString:@".json"];
+    }
+    
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (path != nil) {
+        pathParams[@"path"] = path;
+    }
+    
+    
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if(versionId != nil) {
+        
+        queryParams[@"versionId"] = versionId;
+    }
+    if(storage != nil) {
+        
+        queryParams[@"storage"] = storage;
+    }
+    
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
+    
+    
+    
+    // HTTP header `Accept`
+    headerParams[@"Accept"] = [ASPApiClient selectHeaderAccept:@[@"application/json", @"text/json", @"text/javascript"]];
+    if ([headerParams[@"Accept"] length] == 0) {
+        [headerParams removeObjectForKey:@"Accept"];
+    }
+    
+    // response content type
+    NSString *responseContentType;
+    if ([headerParams objectForKey:@"Accept"]) {
+        responseContentType = [headerParams[@"Accept"] componentsSeparatedByString:@", "][0];
+    }
+    else {
+        responseContentType = @"";
+    }
+    
+    // request content type
+    NSString *requestContentType = [ASPApiClient selectHeaderContentType:@[]];
+    
+    // Authentication setting
+    NSArray *authSettings = @[];
+    
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *files = [[NSMutableDictionary alloc] init];
+    
+    
+    
+    files[@"file"] = file;
+    
+    
+    
+    
+    
+    return [self.apiClient requestWithCompletionBlock: resourcePath
+                                               method: @"PUT"
+                                           pathParams: pathParams
+                                          queryParams: queryParams
+                                           formParams: formParams
+                                                files: files
+                                                 body: bodyParam
+                                         headerParams: headerParams
+                                         authSettings: authSettings
+                                   requestContentType: requestContentType
+                                  responseContentType: responseContentType
+                                         responseType: @"ASPBaseResponse*"
+                                      completionBlock: ^(id data, NSError *error) {
+                                          completionBlock((ASPBaseResponse*)data, error);
+                                      }
+            ];
+}
+
+///
+/// Copy a specific file. Parameters: path - source file path e.g. /file.ext, versionID - source file's version, storage - user's source storage name, newdest - destination file path, destStorage - user's destination storage name.
+/// 
+///  @param path 
+///
+///  @param newdest 
+///
+///  @param versionId 
+///
+///  @param storage 
+///
+///  @param destStorage 
+///
+///  @param file 
+///
+///  @returns ASPBaseResponse*
+///
+-(NSNumber*) putCopyWithCompletionBlock: (NSString*) path
+         newdest: (NSString*) newdest
+         versionId: (NSString*) versionId
+         storage: (NSString*) storage
+         destStorage: (NSString*) destStorage
+         file: (NSURL*) file
+        
+        completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock { 
+        
+
+    
+    // verify the required parameter 'path' is set
+    if (path == nil) {
+        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `path` when calling `putCopy`"];
+    }
+    
+    // verify the required parameter 'newdest' is set
+    if (newdest == nil) {
+        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `newdest` when calling `putCopy`"];
     }
     
 
@@ -394,6 +511,10 @@
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if(newdest != nil) {
+        
+        queryParams[@"newdest"] = newdest;
+    }
     if(versionId != nil) {
         
         queryParams[@"versionId"] = versionId;
@@ -401,6 +522,10 @@
     if(storage != nil) {
         
         queryParams[@"storage"] = storage;
+    }
+    if(destStorage != nil) {
+        
+        queryParams[@"destStorage"] = destStorage;
     }
     
     NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
@@ -773,8 +898,110 @@
 
 ///
 /// Create the folder. Parameters: path - source folder path e.g. /Folder1, storage - user's source storage name, newdest - destination folder path e.g. /Folder2, destStorage - user's destination storage name.
+///
+///  @param path
+///
+///  @param storage
+///
+///  @param destStorage
+///
+///  @returns ASPBaseResponse*
+///
+-(NSNumber*) putCreateFolderWithCompletionBlock: (NSString*) path
+                                        storage: (NSString*) storage
+                                    destStorage: (NSString*) destStorage
+
+                              completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock {
+    
+    
+    
+    // verify the required parameter 'path' is set
+    if (path == nil) {
+        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `path` when calling `putCreateFolder`"];
+    }
+    
+    
+    NSMutableString* resourcePath = [NSMutableString stringWithFormat:@"/storage/folder/{path}"];
+    
+    // remove format in URL if needed
+    if ([resourcePath rangeOfString:@".{format}"].location != NSNotFound) {
+        [resourcePath replaceCharactersInRange: [resourcePath rangeOfString:@".{format}"] withString:@".json"];
+    }
+    
+    NSMutableDictionary *pathParams = [[NSMutableDictionary alloc] init];
+    if (path != nil) {
+        pathParams[@"path"] = path;
+    }
+    
+    
+    NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if(storage != nil) {
+        
+        queryParams[@"storage"] = storage;
+    }
+    if(destStorage != nil) {
+        
+        queryParams[@"destStorage"] = destStorage;
+    }
+    
+    NSMutableDictionary* headerParams = [NSMutableDictionary dictionaryWithDictionary:self.defaultHeaders];
+    
+    
+    
+    // HTTP header `Accept`
+    headerParams[@"Accept"] = [ASPApiClient selectHeaderAccept:@[@"application/json", @"text/json", @"text/javascript"]];
+    if ([headerParams[@"Accept"] length] == 0) {
+        [headerParams removeObjectForKey:@"Accept"];
+    }
+    
+    // response content type
+    NSString *responseContentType;
+    if ([headerParams objectForKey:@"Accept"]) {
+        responseContentType = [headerParams[@"Accept"] componentsSeparatedByString:@", "][0];
+    }
+    else {
+        responseContentType = @"";
+    }
+    
+    // request content type
+    NSString *requestContentType = [ASPApiClient selectHeaderContentType:@[]];
+    
+    // Authentication setting
+    NSArray *authSettings = @[];
+    
+    id bodyParam = nil;
+    NSMutableDictionary *formParams = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *files = [[NSMutableDictionary alloc] init];
+    
+    
+    
+    
+    
+    return [self.apiClient requestWithCompletionBlock: resourcePath
+                                               method: @"PUT"
+                                           pathParams: pathParams
+                                          queryParams: queryParams
+                                           formParams: formParams
+                                                files: files
+                                                 body: bodyParam
+                                         headerParams: headerParams
+                                         authSettings: authSettings
+                                   requestContentType: requestContentType
+                                  responseContentType: responseContentType
+                                         responseType: @"ASPBaseResponse*"
+                                      completionBlock: ^(id data, NSError *error) {
+                                          
+                                          completionBlock((ASPBaseResponse*)data, error);
+                                      }
+            ];
+}
+
+///
+/// Copy a folder. Parameters: path - source folder path e.g. /Folder1, storage - user's source storage name, newdest - destination folder path e.g. /Folder2, destStorage - user's destination storage name.
 /// 
 ///  @param path 
+///
+///  @param newdest 
 ///
 ///  @param storage 
 ///
@@ -782,7 +1009,8 @@
 ///
 ///  @returns ASPBaseResponse*
 ///
--(NSNumber*) putCreateFolderWithCompletionBlock: (NSString*) path
+-(NSNumber*) putCopyFolderWithCompletionBlock: (NSString*) path
+         newdest: (NSString*) newdest
          storage: (NSString*) storage
          destStorage: (NSString*) destStorage
         
@@ -792,7 +1020,12 @@
     
     // verify the required parameter 'path' is set
     if (path == nil) {
-        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `path` when calling `putCreateFolder`"];
+        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `path` when calling `putCopyFolder`"];
+    }
+    
+    // verify the required parameter 'newdest' is set
+    if (newdest == nil) {
+        [NSException raise:@"Invalid parameter" format:@"Missing the required parameter `newdest` when calling `putCopyFolder`"];
     }
     
 
@@ -810,6 +1043,10 @@
     
 
     NSMutableDictionary* queryParams = [[NSMutableDictionary alloc] init];
+    if(newdest != nil) {
+        
+        queryParams[@"newdest"] = newdest;
+    }
     if(storage != nil) {
         
         queryParams[@"storage"] = storage;
@@ -824,7 +1061,7 @@
     
 
     // HTTP header `Accept`
-    headerParams[@"Accept"] = [ASPApiClient selectHeaderAccept:@[@"application/json", @"text/json", @"text/javascript"]];
+    headerParams[@"Accept"] = [ASPApiClient selectHeaderAccept:@[@"application/json"]];
     if ([headerParams[@"Accept"] length] == 0) {
         [headerParams removeObjectForKey:@"Accept"];
     }
@@ -839,7 +1076,7 @@
     }
 
     // request content type
-    NSString *requestContentType = [ASPApiClient selectHeaderContentType:@[]];
+    NSString *requestContentType = [ASPApiClient selectHeaderContentType:@[@"application/json"]];
 
     // Authentication setting
     NSArray *authSettings = @[];

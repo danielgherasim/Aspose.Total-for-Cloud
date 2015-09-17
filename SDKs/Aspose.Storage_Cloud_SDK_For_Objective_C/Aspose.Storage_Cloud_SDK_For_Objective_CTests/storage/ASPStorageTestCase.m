@@ -71,6 +71,21 @@
     }];
 }
 
+- (void)testPutCopy {
+    XCTestExpectation *expectation = [self expectationWithDescription:@""];
+    
+    [self.storageApi putCopyWithCompletionBlock:@"Creative.jpg" newdest:@"copyTo" versionId:nil storage:nil destStorage:nil file:nil completionHandler:^(ASPBaseResponse *output, NSError *error) {
+        XCTAssertNotNil(output, @"Failed to copy a specific file.");
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
 - (void)testPutCreate {
     XCTestExpectation *expectation = [self expectationWithDescription:@""];
     
@@ -133,6 +148,23 @@
         }
     }];
 }
+
+
+- (void)testPutCopyFolder {
+    XCTestExpectation *expectation = [self expectationWithDescription:@""];
+    
+    [self.storageApi putCopyFolderWithCompletionBlock:@"moveFrom" newdest:@"moveTo" storage:nil destStorage:nil completionHandler:^(ASPBaseResponse *output, NSError *error) {
+        XCTAssertNotNil(output, @"Failed to create the folder.");
+        [expectation fulfill];
+    }];
+    
+    [self waitForExpectationsWithTimeout:10.0 handler:^(NSError *error) {
+        if (error) {
+            NSLog(@"Timeout Error: %@", error);
+        }
+    }];
+}
+
 
 - (void)testPutCreateFolder {
     XCTestExpectation *expectation = [self expectationWithDescription:@""];

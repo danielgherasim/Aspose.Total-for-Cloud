@@ -13,7 +13,6 @@
 		30238C421BAA7B3000A135B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30238C401BAA7B3000A135B1 /* Main.storyboard */; };
 		30238C441BAA7B3000A135B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30238C431BAA7B3000A135B1 /* Assets.xcassets */; };
 		30238C471BAA7B3000A135B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30238C451BAA7B3000A135B1 /* LaunchScreen.storyboard */; };
-		30238C821BAA7C5400A135B1 /* ASPStorageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C5F1BAA7C5400A135B1 /* ASPStorageApi.m */; settings = {ASSET_TAGS = (); }; };
 		30238C831BAA7C5400A135B1 /* ASPApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C621BAA7C5400A135B1 /* ASPApiClient.m */; settings = {ASSET_TAGS = (); }; };
 		30238C841BAA7C5400A135B1 /* ASPConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C641BAA7C5400A135B1 /* ASPConfiguration.m */; settings = {ASSET_TAGS = (); }; };
 		30238C851BAA7C5400A135B1 /* ASPJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C661BAA7C5400A135B1 /* ASPJSONRequestSerializer.m */; settings = {ASSET_TAGS = (); }; };
@@ -33,6 +32,7 @@
 		30238C971BAA7C6300A135B1 /* Creative.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30238C941BAA7C6300A135B1 /* Creative.jpg */; settings = {ASSET_TAGS = (); }; };
 		30238C981BAA7C6300A135B1 /* ASPStorageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C961BAA7C6300A135B1 /* ASPStorageTestCase.m */; settings = {ASSET_TAGS = (); }; };
 		30238C991BAA7C6E00A135B1 /* Creative.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30238C941BAA7C6300A135B1 /* Creative.jpg */; settings = {ASSET_TAGS = (); }; };
+		30238C9C1BAA93D300A135B1 /* ASPStorageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C9B1BAA93D300A135B1 /* ASPStorageApi.m */; settings = {ASSET_TAGS = (); }; };
 		8E2389F4D30B90CB56A743CF /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA96BA38FCBE33C0E7AEACDE /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a */; };
 		B586A951405BC722174911F1 /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F50E85EAA32DB71098455B /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a */; };
 /* End PBXBuildFile section */
@@ -62,8 +62,6 @@
 		30238C481BAA7B3000A135B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		30238C4D1BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Aspose.Storage_Cloud_SDK_For_Objective_CTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		30238C531BAA7B3000A135B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		30238C5E1BAA7C5400A135B1 /* ASPStorageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPStorageApi.h; sourceTree = "<group>"; };
-		30238C5F1BAA7C5400A135B1 /* ASPStorageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPStorageApi.m; sourceTree = "<group>"; };
 		30238C611BAA7C5400A135B1 /* ASPApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPApiClient.h; sourceTree = "<group>"; };
 		30238C621BAA7C5400A135B1 /* ASPApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPApiClient.m; sourceTree = "<group>"; };
 		30238C631BAA7C5400A135B1 /* ASPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPConfiguration.h; sourceTree = "<group>"; };
@@ -98,6 +96,8 @@
 		30238C811BAA7C5400A135B1 /* ASPStorageExistResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPStorageExistResponse.m; sourceTree = "<group>"; };
 		30238C941BAA7C6300A135B1 /* Creative.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Creative.jpg; sourceTree = "<group>"; };
 		30238C961BAA7C6300A135B1 /* ASPStorageTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPStorageTestCase.m; sourceTree = "<group>"; };
+		30238C9A1BAA93D300A135B1 /* ASPStorageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPStorageApi.h; sourceTree = "<group>"; };
+		30238C9B1BAA93D300A135B1 /* ASPStorageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPStorageApi.m; sourceTree = "<group>"; };
 		BA96BA38FCBE33C0E7AEACDE /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C11EEF0C4C82734646CD7EFC /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig"; sourceTree = "<group>"; };
 		C61DE89F12C43D07D9923D60 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,8 +203,8 @@
 		30238C5D1BAA7C5400A135B1 /* api */ = {
 			isa = PBXGroup;
 			children = (
-				30238C5E1BAA7C5400A135B1 /* ASPStorageApi.h */,
-				30238C5F1BAA7C5400A135B1 /* ASPStorageApi.m */,
+				30238C9A1BAA93D300A135B1 /* ASPStorageApi.h */,
+				30238C9B1BAA93D300A135B1 /* ASPStorageApi.m */,
 			);
 			path = api;
 			sourceTree = "<group>";
@@ -453,7 +453,6 @@
 				30238C911BAA7C5400A135B1 /* ASPObject.m in Sources */,
 				30238C851BAA7C5400A135B1 /* ASPJSONRequestSerializer.m in Sources */,
 				30238C3F1BAA7B3000A135B1 /* ViewController.m in Sources */,
-				30238C821BAA7C5400A135B1 /* ASPStorageApi.m in Sources */,
 				30238C3C1BAA7B3000A135B1 /* AppDelegate.m in Sources */,
 				30238C8E1BAA7C5400A135B1 /* ASPFileVersion.m in Sources */,
 				30238C891BAA7C5400A135B1 /* ASPDiscUsage.m in Sources */,
@@ -467,6 +466,7 @@
 				30238C8B1BAA7C5400A135B1 /* ASPFileExist.m in Sources */,
 				30238C871BAA7C5400A135B1 /* ASPQueryParamCollection.m in Sources */,
 				30238C881BAA7C5400A135B1 /* ASPBaseResponse.m in Sources */,
+				30238C9C1BAA93D300A135B1 /* ASPStorageApi.m in Sources */,
 				30238C391BAA7B3000A135B1 /* main.m in Sources */,
 				30238C8D1BAA7C5400A135B1 /* ASPFileResponse.m in Sources */,
 			);

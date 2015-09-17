@@ -73,28 +73,72 @@
      storage:(NSString*) storage 
     
     completionHandler: (void (^)(NSURL* output, NSError* error))completionBlock;
+
+
+
+///
+///
+/// Create the folder. Parameters: path - source folder path e.g. /Folder1, storage - user's source storage name, newdest - destination folder path e.g. /Folder2, destStorage - user's destination storage name.
+///
+///
+/// @param path
+/// @param storage
+/// @param destStorage
+///
+///
+/// @return ASPBaseResponse*
+-(NSNumber*) putCreateFolderWithCompletionBlock :(NSString*) path
+                                         storage:(NSString*) storage
+                                     destStorage:(NSString*) destStorage
+
+                               completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock;
+
+
+
+///
+///
+/// Copy a specific file. Parameters: path - source file path e.g. /file.ext, versionID - source file's version, storage - user's source storage name, newdest - destination file path, destStorage - user's destination storage name.
+/// 
+///
+/// @param path 
+/// @param newdest 
+/// @param versionId 
+/// @param storage 
+/// @param destStorage 
+/// @param file 
+/// 
+///
+/// @return ASPBaseResponse*
+-(NSNumber*) putCopyWithCompletionBlock :(NSString*) path 
+     newdest:(NSString*) newdest 
+     versionId:(NSString*) versionId 
+     storage:(NSString*) storage 
+     destStorage:(NSString*) destStorage 
+     file:(NSURL*) file 
+    
+    completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock;
     
 
 
 ///
 ///
 /// Upload a specific file. Parameters: path - source file path e.g. /file.ext, versionID - source file's version, storage - user's source storage name, newdest - destination file path, destStorage - user's destination storage name.
-/// 
 ///
-/// @param path 
+///
+/// @param path
 /// @param file file to upload
-/// @param versionId 
-/// @param storage 
-/// 
+/// @param versionId
+/// @param storage
+///
 ///
 /// @return ASPBaseResponse*
--(NSNumber*) putCreateWithCompletionBlock :(NSString*) path 
-     file:(NSURL*) file 
-     versionId:(NSString*) versionId 
-     storage:(NSString*) storage 
-    
-    completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock;
-    
+-(NSNumber*) putCreateWithCompletionBlock :(NSString*) path
+                                      file:(NSURL*) file
+                                 versionId:(NSString*) versionId
+                                   storage:(NSString*) storage
+
+                         completionHandler: (void (^)(ASPBaseResponse* output, NSError* error))completionBlock;
+
 
 
 ///
@@ -158,16 +202,18 @@
 
 ///
 ///
-/// Create the folder. Parameters: path - source folder path e.g. /Folder1, storage - user's source storage name, newdest - destination folder path e.g. /Folder2, destStorage - user's destination storage name.
+/// Copy a folder. Parameters: path - source folder path e.g. /Folder1, storage - user's source storage name, newdest - destination folder path e.g. /Folder2, destStorage - user's destination storage name.
 /// 
 ///
 /// @param path 
+/// @param newdest 
 /// @param storage 
 /// @param destStorage 
 /// 
 ///
 /// @return ASPBaseResponse*
--(NSNumber*) putCreateFolderWithCompletionBlock :(NSString*) path 
+-(NSNumber*) putCopyFolderWithCompletionBlock :(NSString*) path 
+     newdest:(NSString*) newdest 
      storage:(NSString*) storage 
      destStorage:(NSString*) destStorage 
     
