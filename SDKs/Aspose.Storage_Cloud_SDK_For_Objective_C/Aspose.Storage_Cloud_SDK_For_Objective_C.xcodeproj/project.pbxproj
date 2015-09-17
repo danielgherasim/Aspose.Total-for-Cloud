@@ -1,0 +1,678 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30238C391BAA7B3000A135B1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C381BAA7B3000A135B1 /* main.m */; };
+		30238C3C1BAA7B3000A135B1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C3B1BAA7B3000A135B1 /* AppDelegate.m */; };
+		30238C3F1BAA7B3000A135B1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C3E1BAA7B3000A135B1 /* ViewController.m */; };
+		30238C421BAA7B3000A135B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30238C401BAA7B3000A135B1 /* Main.storyboard */; };
+		30238C441BAA7B3000A135B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30238C431BAA7B3000A135B1 /* Assets.xcassets */; };
+		30238C471BAA7B3000A135B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30238C451BAA7B3000A135B1 /* LaunchScreen.storyboard */; };
+		30238C821BAA7C5400A135B1 /* ASPStorageApi.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C5F1BAA7C5400A135B1 /* ASPStorageApi.m */; settings = {ASSET_TAGS = (); }; };
+		30238C831BAA7C5400A135B1 /* ASPApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C621BAA7C5400A135B1 /* ASPApiClient.m */; settings = {ASSET_TAGS = (); }; };
+		30238C841BAA7C5400A135B1 /* ASPConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C641BAA7C5400A135B1 /* ASPConfiguration.m */; settings = {ASSET_TAGS = (); }; };
+		30238C851BAA7C5400A135B1 /* ASPJSONRequestSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C661BAA7C5400A135B1 /* ASPJSONRequestSerializer.m */; settings = {ASSET_TAGS = (); }; };
+		30238C861BAA7C5400A135B1 /* ASPJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C681BAA7C5400A135B1 /* ASPJSONResponseSerializer.m */; settings = {ASSET_TAGS = (); }; };
+		30238C871BAA7C5400A135B1 /* ASPQueryParamCollection.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C6A1BAA7C5400A135B1 /* ASPQueryParamCollection.m */; settings = {ASSET_TAGS = (); }; };
+		30238C881BAA7C5400A135B1 /* ASPBaseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C6D1BAA7C5400A135B1 /* ASPBaseResponse.m */; settings = {ASSET_TAGS = (); }; };
+		30238C891BAA7C5400A135B1 /* ASPDiscUsage.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C6F1BAA7C5400A135B1 /* ASPDiscUsage.m */; settings = {ASSET_TAGS = (); }; };
+		30238C8A1BAA7C5400A135B1 /* ASPDiscUsageResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C711BAA7C5400A135B1 /* ASPDiscUsageResponse.m */; settings = {ASSET_TAGS = (); }; };
+		30238C8B1BAA7C5400A135B1 /* ASPFileExist.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C731BAA7C5400A135B1 /* ASPFileExist.m */; settings = {ASSET_TAGS = (); }; };
+		30238C8C1BAA7C5400A135B1 /* ASPFileExistResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C751BAA7C5400A135B1 /* ASPFileExistResponse.m */; settings = {ASSET_TAGS = (); }; };
+		30238C8D1BAA7C5400A135B1 /* ASPFileResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C771BAA7C5400A135B1 /* ASPFileResponse.m */; settings = {ASSET_TAGS = (); }; };
+		30238C8E1BAA7C5400A135B1 /* ASPFileVersion.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C791BAA7C5400A135B1 /* ASPFileVersion.m */; settings = {ASSET_TAGS = (); }; };
+		30238C8F1BAA7C5400A135B1 /* ASPFileVersionsResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C7B1BAA7C5400A135B1 /* ASPFileVersionsResponse.m */; settings = {ASSET_TAGS = (); }; };
+		30238C901BAA7C5400A135B1 /* ASPFolderResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C7D1BAA7C5400A135B1 /* ASPFolderResponse.m */; settings = {ASSET_TAGS = (); }; };
+		30238C911BAA7C5400A135B1 /* ASPObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C7F1BAA7C5400A135B1 /* ASPObject.m */; settings = {ASSET_TAGS = (); }; };
+		30238C921BAA7C5400A135B1 /* ASPStorageExistResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C811BAA7C5400A135B1 /* ASPStorageExistResponse.m */; settings = {ASSET_TAGS = (); }; };
+		30238C971BAA7C6300A135B1 /* Creative.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30238C941BAA7C6300A135B1 /* Creative.jpg */; settings = {ASSET_TAGS = (); }; };
+		30238C981BAA7C6300A135B1 /* ASPStorageTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 30238C961BAA7C6300A135B1 /* ASPStorageTestCase.m */; settings = {ASSET_TAGS = (); }; };
+		30238C991BAA7C6E00A135B1 /* Creative.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 30238C941BAA7C6300A135B1 /* Creative.jpg */; settings = {ASSET_TAGS = (); }; };
+		8E2389F4D30B90CB56A743CF /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA96BA38FCBE33C0E7AEACDE /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a */; };
+		B586A951405BC722174911F1 /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 07F50E85EAA32DB71098455B /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		30238C4E1BAA7B3000A135B1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 30238C2C1BAA7B3000A135B1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 30238C331BAA7B3000A135B1;
+			remoteInfo = Aspose.Storage_Cloud_SDK_For_Objective_C;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		07F50E85EAA32DB71098455B /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1138FE3CD254FCE4C6F11D11 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests/Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.release.xcconfig"; sourceTree = "<group>"; };
+		30238C341BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Aspose.Storage_Cloud_SDK_For_Objective_C.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		30238C381BAA7B3000A135B1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		30238C3A1BAA7B3000A135B1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		30238C3B1BAA7B3000A135B1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		30238C3D1BAA7B3000A135B1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		30238C3E1BAA7B3000A135B1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		30238C411BAA7B3000A135B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		30238C431BAA7B3000A135B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		30238C461BAA7B3000A135B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		30238C481BAA7B3000A135B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30238C4D1BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Aspose.Storage_Cloud_SDK_For_Objective_CTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		30238C531BAA7B3000A135B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		30238C5E1BAA7C5400A135B1 /* ASPStorageApi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPStorageApi.h; sourceTree = "<group>"; };
+		30238C5F1BAA7C5400A135B1 /* ASPStorageApi.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPStorageApi.m; sourceTree = "<group>"; };
+		30238C611BAA7C5400A135B1 /* ASPApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPApiClient.h; sourceTree = "<group>"; };
+		30238C621BAA7C5400A135B1 /* ASPApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPApiClient.m; sourceTree = "<group>"; };
+		30238C631BAA7C5400A135B1 /* ASPConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPConfiguration.h; sourceTree = "<group>"; };
+		30238C641BAA7C5400A135B1 /* ASPConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPConfiguration.m; sourceTree = "<group>"; };
+		30238C651BAA7C5400A135B1 /* ASPJSONRequestSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPJSONRequestSerializer.h; sourceTree = "<group>"; };
+		30238C661BAA7C5400A135B1 /* ASPJSONRequestSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPJSONRequestSerializer.m; sourceTree = "<group>"; };
+		30238C671BAA7C5400A135B1 /* ASPJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPJSONResponseSerializer.h; sourceTree = "<group>"; };
+		30238C681BAA7C5400A135B1 /* ASPJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPJSONResponseSerializer.m; sourceTree = "<group>"; };
+		30238C691BAA7C5400A135B1 /* ASPQueryParamCollection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPQueryParamCollection.h; sourceTree = "<group>"; };
+		30238C6A1BAA7C5400A135B1 /* ASPQueryParamCollection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPQueryParamCollection.m; sourceTree = "<group>"; };
+		30238C6C1BAA7C5400A135B1 /* ASPBaseResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPBaseResponse.h; sourceTree = "<group>"; };
+		30238C6D1BAA7C5400A135B1 /* ASPBaseResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPBaseResponse.m; sourceTree = "<group>"; };
+		30238C6E1BAA7C5400A135B1 /* ASPDiscUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPDiscUsage.h; sourceTree = "<group>"; };
+		30238C6F1BAA7C5400A135B1 /* ASPDiscUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPDiscUsage.m; sourceTree = "<group>"; };
+		30238C701BAA7C5400A135B1 /* ASPDiscUsageResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPDiscUsageResponse.h; sourceTree = "<group>"; };
+		30238C711BAA7C5400A135B1 /* ASPDiscUsageResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPDiscUsageResponse.m; sourceTree = "<group>"; };
+		30238C721BAA7C5400A135B1 /* ASPFileExist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPFileExist.h; sourceTree = "<group>"; };
+		30238C731BAA7C5400A135B1 /* ASPFileExist.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPFileExist.m; sourceTree = "<group>"; };
+		30238C741BAA7C5400A135B1 /* ASPFileExistResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPFileExistResponse.h; sourceTree = "<group>"; };
+		30238C751BAA7C5400A135B1 /* ASPFileExistResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPFileExistResponse.m; sourceTree = "<group>"; };
+		30238C761BAA7C5400A135B1 /* ASPFileResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPFileResponse.h; sourceTree = "<group>"; };
+		30238C771BAA7C5400A135B1 /* ASPFileResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPFileResponse.m; sourceTree = "<group>"; };
+		30238C781BAA7C5400A135B1 /* ASPFileVersion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPFileVersion.h; sourceTree = "<group>"; };
+		30238C791BAA7C5400A135B1 /* ASPFileVersion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPFileVersion.m; sourceTree = "<group>"; };
+		30238C7A1BAA7C5400A135B1 /* ASPFileVersionsResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPFileVersionsResponse.h; sourceTree = "<group>"; };
+		30238C7B1BAA7C5400A135B1 /* ASPFileVersionsResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPFileVersionsResponse.m; sourceTree = "<group>"; };
+		30238C7C1BAA7C5400A135B1 /* ASPFolderResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPFolderResponse.h; sourceTree = "<group>"; };
+		30238C7D1BAA7C5400A135B1 /* ASPFolderResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPFolderResponse.m; sourceTree = "<group>"; };
+		30238C7E1BAA7C5400A135B1 /* ASPObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPObject.h; sourceTree = "<group>"; };
+		30238C7F1BAA7C5400A135B1 /* ASPObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPObject.m; sourceTree = "<group>"; };
+		30238C801BAA7C5400A135B1 /* ASPStorageExistResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ASPStorageExistResponse.h; sourceTree = "<group>"; };
+		30238C811BAA7C5400A135B1 /* ASPStorageExistResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPStorageExistResponse.m; sourceTree = "<group>"; };
+		30238C941BAA7C6300A135B1 /* Creative.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Creative.jpg; sourceTree = "<group>"; };
+		30238C961BAA7C6300A135B1 /* ASPStorageTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ASPStorageTestCase.m; sourceTree = "<group>"; };
+		BA96BA38FCBE33C0E7AEACDE /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C11EEF0C4C82734646CD7EFC /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig"; sourceTree = "<group>"; };
+		C61DE89F12C43D07D9923D60 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig"; sourceTree = "<group>"; };
+		E3F5E65381CBF053071D9D04 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests/Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		30238C311BAA7B3000A135B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E2389F4D30B90CB56A743CF /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30238C4A1BAA7B3000A135B1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B586A951405BC722174911F1 /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		30026FA65C5129B446EAE22F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C61DE89F12C43D07D9923D60 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig */,
+				C11EEF0C4C82734646CD7EFC /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig */,
+				E3F5E65381CBF053071D9D04 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.debug.xcconfig */,
+				1138FE3CD254FCE4C6F11D11 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		30238C2B1BAA7B3000A135B1 = {
+			isa = PBXGroup;
+			children = (
+				30238C361BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C */,
+				30238C501BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests */,
+				30238C351BAA7B3000A135B1 /* Products */,
+				30026FA65C5129B446EAE22F /* Pods */,
+				EFBF2A39BAD0AF2287B122A1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		30238C351BAA7B3000A135B1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				30238C341BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C.app */,
+				30238C4D1BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		30238C361BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C */ = {
+			isa = PBXGroup;
+			children = (
+				30238C5C1BAA7C5400A135B1 /* storage */,
+				30238C3A1BAA7B3000A135B1 /* AppDelegate.h */,
+				30238C3B1BAA7B3000A135B1 /* AppDelegate.m */,
+				30238C3D1BAA7B3000A135B1 /* ViewController.h */,
+				30238C3E1BAA7B3000A135B1 /* ViewController.m */,
+				30238C401BAA7B3000A135B1 /* Main.storyboard */,
+				30238C431BAA7B3000A135B1 /* Assets.xcassets */,
+				30238C451BAA7B3000A135B1 /* LaunchScreen.storyboard */,
+				30238C481BAA7B3000A135B1 /* Info.plist */,
+				30238C371BAA7B3000A135B1 /* Supporting Files */,
+			);
+			path = Aspose.Storage_Cloud_SDK_For_Objective_C;
+			sourceTree = "<group>";
+		};
+		30238C371BAA7B3000A135B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				30238C381BAA7B3000A135B1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		30238C501BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests */ = {
+			isa = PBXGroup;
+			children = (
+				30238C931BAA7C6300A135B1 /* resources */,
+				30238C951BAA7C6300A135B1 /* storage */,
+				30238C531BAA7B3000A135B1 /* Info.plist */,
+			);
+			path = Aspose.Storage_Cloud_SDK_For_Objective_CTests;
+			sourceTree = "<group>";
+		};
+		30238C5C1BAA7C5400A135B1 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				30238C5D1BAA7C5400A135B1 /* api */,
+				30238C601BAA7C5400A135B1 /* client */,
+				30238C6B1BAA7C5400A135B1 /* model */,
+			);
+			path = storage;
+			sourceTree = "<group>";
+		};
+		30238C5D1BAA7C5400A135B1 /* api */ = {
+			isa = PBXGroup;
+			children = (
+				30238C5E1BAA7C5400A135B1 /* ASPStorageApi.h */,
+				30238C5F1BAA7C5400A135B1 /* ASPStorageApi.m */,
+			);
+			path = api;
+			sourceTree = "<group>";
+		};
+		30238C601BAA7C5400A135B1 /* client */ = {
+			isa = PBXGroup;
+			children = (
+				30238C611BAA7C5400A135B1 /* ASPApiClient.h */,
+				30238C621BAA7C5400A135B1 /* ASPApiClient.m */,
+				30238C631BAA7C5400A135B1 /* ASPConfiguration.h */,
+				30238C641BAA7C5400A135B1 /* ASPConfiguration.m */,
+				30238C651BAA7C5400A135B1 /* ASPJSONRequestSerializer.h */,
+				30238C661BAA7C5400A135B1 /* ASPJSONRequestSerializer.m */,
+				30238C671BAA7C5400A135B1 /* ASPJSONResponseSerializer.h */,
+				30238C681BAA7C5400A135B1 /* ASPJSONResponseSerializer.m */,
+				30238C691BAA7C5400A135B1 /* ASPQueryParamCollection.h */,
+				30238C6A1BAA7C5400A135B1 /* ASPQueryParamCollection.m */,
+			);
+			path = client;
+			sourceTree = "<group>";
+		};
+		30238C6B1BAA7C5400A135B1 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				30238C6C1BAA7C5400A135B1 /* ASPBaseResponse.h */,
+				30238C6D1BAA7C5400A135B1 /* ASPBaseResponse.m */,
+				30238C6E1BAA7C5400A135B1 /* ASPDiscUsage.h */,
+				30238C6F1BAA7C5400A135B1 /* ASPDiscUsage.m */,
+				30238C701BAA7C5400A135B1 /* ASPDiscUsageResponse.h */,
+				30238C711BAA7C5400A135B1 /* ASPDiscUsageResponse.m */,
+				30238C721BAA7C5400A135B1 /* ASPFileExist.h */,
+				30238C731BAA7C5400A135B1 /* ASPFileExist.m */,
+				30238C741BAA7C5400A135B1 /* ASPFileExistResponse.h */,
+				30238C751BAA7C5400A135B1 /* ASPFileExistResponse.m */,
+				30238C761BAA7C5400A135B1 /* ASPFileResponse.h */,
+				30238C771BAA7C5400A135B1 /* ASPFileResponse.m */,
+				30238C781BAA7C5400A135B1 /* ASPFileVersion.h */,
+				30238C791BAA7C5400A135B1 /* ASPFileVersion.m */,
+				30238C7A1BAA7C5400A135B1 /* ASPFileVersionsResponse.h */,
+				30238C7B1BAA7C5400A135B1 /* ASPFileVersionsResponse.m */,
+				30238C7C1BAA7C5400A135B1 /* ASPFolderResponse.h */,
+				30238C7D1BAA7C5400A135B1 /* ASPFolderResponse.m */,
+				30238C7E1BAA7C5400A135B1 /* ASPObject.h */,
+				30238C7F1BAA7C5400A135B1 /* ASPObject.m */,
+				30238C801BAA7C5400A135B1 /* ASPStorageExistResponse.h */,
+				30238C811BAA7C5400A135B1 /* ASPStorageExistResponse.m */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		30238C931BAA7C6300A135B1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				30238C941BAA7C6300A135B1 /* Creative.jpg */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		30238C951BAA7C6300A135B1 /* storage */ = {
+			isa = PBXGroup;
+			children = (
+				30238C961BAA7C6300A135B1 /* ASPStorageTestCase.m */,
+			);
+			path = storage;
+			sourceTree = "<group>";
+		};
+		EFBF2A39BAD0AF2287B122A1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BA96BA38FCBE33C0E7AEACDE /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_C.a */,
+				07F50E85EAA32DB71098455B /* libPods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		30238C331BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30238C561BAA7B3000A135B1 /* Build configuration list for PBXNativeTarget "Aspose.Storage_Cloud_SDK_For_Objective_C" */;
+			buildPhases = (
+				78F52AE0DF13A64A54845FF5 /* Check Pods Manifest.lock */,
+				30238C301BAA7B3000A135B1 /* Sources */,
+				30238C311BAA7B3000A135B1 /* Frameworks */,
+				30238C321BAA7B3000A135B1 /* Resources */,
+				EDF34AAFEBF352DBFE0EF1A8 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Aspose.Storage_Cloud_SDK_For_Objective_C;
+			productName = Aspose.Storage_Cloud_SDK_For_Objective_C;
+			productReference = 30238C341BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C.app */;
+			productType = "com.apple.product-type.application";
+		};
+		30238C4C1BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 30238C591BAA7B3000A135B1 /* Build configuration list for PBXNativeTarget "Aspose.Storage_Cloud_SDK_For_Objective_CTests" */;
+			buildPhases = (
+				060E4AA8B03F0FB5879D5BFA /* Check Pods Manifest.lock */,
+				30238C491BAA7B3000A135B1 /* Sources */,
+				30238C4A1BAA7B3000A135B1 /* Frameworks */,
+				30238C4B1BAA7B3000A135B1 /* Resources */,
+				B9B4EE114B5B68400761E961 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				30238C4F1BAA7B3000A135B1 /* PBXTargetDependency */,
+			);
+			name = Aspose.Storage_Cloud_SDK_For_Objective_CTests;
+			productName = Aspose.Storage_Cloud_SDK_For_Objective_CTests;
+			productReference = 30238C4D1BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		30238C2C1BAA7B3000A135B1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = Aspose;
+				TargetAttributes = {
+					30238C331BAA7B3000A135B1 = {
+						CreatedOnToolsVersion = 7.0;
+					};
+					30238C4C1BAA7B3000A135B1 = {
+						CreatedOnToolsVersion = 7.0;
+						TestTargetID = 30238C331BAA7B3000A135B1;
+					};
+				};
+			};
+			buildConfigurationList = 30238C2F1BAA7B3000A135B1 /* Build configuration list for PBXProject "Aspose.Storage_Cloud_SDK_For_Objective_C" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 30238C2B1BAA7B3000A135B1;
+			productRefGroup = 30238C351BAA7B3000A135B1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				30238C331BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C */,
+				30238C4C1BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_CTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		30238C321BAA7B3000A135B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30238C471BAA7B3000A135B1 /* LaunchScreen.storyboard in Resources */,
+				30238C441BAA7B3000A135B1 /* Assets.xcassets in Resources */,
+				30238C991BAA7C6E00A135B1 /* Creative.jpg in Resources */,
+				30238C421BAA7B3000A135B1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30238C4B1BAA7B3000A135B1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30238C971BAA7C6300A135B1 /* Creative.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		060E4AA8B03F0FB5879D5BFA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		78F52AE0DF13A64A54845FF5 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B9B4EE114B5B68400761E961 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests/Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EDF34AAFEBF352DBFE0EF1A8 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C/Pods-Aspose.Storage_Cloud_SDK_For_Objective_C-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		30238C301BAA7B3000A135B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30238C8A1BAA7C5400A135B1 /* ASPDiscUsageResponse.m in Sources */,
+				30238C911BAA7C5400A135B1 /* ASPObject.m in Sources */,
+				30238C851BAA7C5400A135B1 /* ASPJSONRequestSerializer.m in Sources */,
+				30238C3F1BAA7B3000A135B1 /* ViewController.m in Sources */,
+				30238C821BAA7C5400A135B1 /* ASPStorageApi.m in Sources */,
+				30238C3C1BAA7B3000A135B1 /* AppDelegate.m in Sources */,
+				30238C8E1BAA7C5400A135B1 /* ASPFileVersion.m in Sources */,
+				30238C891BAA7C5400A135B1 /* ASPDiscUsage.m in Sources */,
+				30238C841BAA7C5400A135B1 /* ASPConfiguration.m in Sources */,
+				30238C8C1BAA7C5400A135B1 /* ASPFileExistResponse.m in Sources */,
+				30238C901BAA7C5400A135B1 /* ASPFolderResponse.m in Sources */,
+				30238C861BAA7C5400A135B1 /* ASPJSONResponseSerializer.m in Sources */,
+				30238C831BAA7C5400A135B1 /* ASPApiClient.m in Sources */,
+				30238C921BAA7C5400A135B1 /* ASPStorageExistResponse.m in Sources */,
+				30238C8F1BAA7C5400A135B1 /* ASPFileVersionsResponse.m in Sources */,
+				30238C8B1BAA7C5400A135B1 /* ASPFileExist.m in Sources */,
+				30238C871BAA7C5400A135B1 /* ASPQueryParamCollection.m in Sources */,
+				30238C881BAA7C5400A135B1 /* ASPBaseResponse.m in Sources */,
+				30238C391BAA7B3000A135B1 /* main.m in Sources */,
+				30238C8D1BAA7C5400A135B1 /* ASPFileResponse.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		30238C491BAA7B3000A135B1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30238C981BAA7C6300A135B1 /* ASPStorageTestCase.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		30238C4F1BAA7B3000A135B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 30238C331BAA7B3000A135B1 /* Aspose.Storage_Cloud_SDK_For_Objective_C */;
+			targetProxy = 30238C4E1BAA7B3000A135B1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		30238C401BAA7B3000A135B1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30238C411BAA7B3000A135B1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		30238C451BAA7B3000A135B1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30238C461BAA7B3000A135B1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		30238C541BAA7B3000A135B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		30238C551BAA7B3000A135B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		30238C571BAA7B3000A135B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C61DE89F12C43D07D9923D60 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Aspose.Storage_Cloud_SDK_For_Objective_C/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Storage-Cloud-SDK-For-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		30238C581BAA7B3000A135B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C11EEF0C4C82734646CD7EFC /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_C.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Aspose.Storage_Cloud_SDK_For_Objective_C/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Storage-Cloud-SDK-For-Objective-C";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		30238C5A1BAA7B3000A135B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3F5E65381CBF053071D9D04 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Aspose.Storage_Cloud_SDK_For_Objective_CTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Storage-Cloud-SDK-For-Objective-CTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aspose.Storage_Cloud_SDK_For_Objective_C.app/Aspose.Storage_Cloud_SDK_For_Objective_C";
+			};
+			name = Debug;
+		};
+		30238C5B1BAA7B3000A135B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1138FE3CD254FCE4C6F11D11 /* Pods-Aspose.Storage_Cloud_SDK_For_Objective_CTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = Aspose.Storage_Cloud_SDK_For_Objective_CTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aspose.Aspose-Storage-Cloud-SDK-For-Objective-CTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Aspose.Storage_Cloud_SDK_For_Objective_C.app/Aspose.Storage_Cloud_SDK_For_Objective_C";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		30238C2F1BAA7B3000A135B1 /* Build configuration list for PBXProject "Aspose.Storage_Cloud_SDK_For_Objective_C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30238C541BAA7B3000A135B1 /* Debug */,
+				30238C551BAA7B3000A135B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30238C561BAA7B3000A135B1 /* Build configuration list for PBXNativeTarget "Aspose.Storage_Cloud_SDK_For_Objective_C" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30238C571BAA7B3000A135B1 /* Debug */,
+				30238C581BAA7B3000A135B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		30238C591BAA7B3000A135B1 /* Build configuration list for PBXNativeTarget "Aspose.Storage_Cloud_SDK_For_Objective_CTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				30238C5A1BAA7B3000A135B1 /* Debug */,
+				30238C5B1BAA7B3000A135B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 30238C2C1BAA7B3000A135B1 /* Project object */;
+}
