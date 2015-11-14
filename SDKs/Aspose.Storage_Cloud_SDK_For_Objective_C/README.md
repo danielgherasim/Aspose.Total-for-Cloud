@@ -5,7 +5,7 @@ This SDK lets users use Aspose Cloud Storage APIs in their iOS app.
 
 [CocoaPods](http://cocoapods.org) is the recommended way to add Aspose-Storage-SDK to your project.
 
-1. Add a pod entry for Aspose-Storage-SDK to your Podfile `pod 'Aspose-Storage-SDK'`
+1. Add a pod entry for Aspose-Storage-SDK to your Podfile `pod 'AsposeStorageCloud'`
 2. Install the pod(s) by running `pod install`.
 3. Include Aspose-Storage-SDK wherever you need it with `#import "ASPStorageApi.h"`.
 
