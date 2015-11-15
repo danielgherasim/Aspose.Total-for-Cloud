@@ -1,6 +1,14 @@
 #import "ASPApiClient.h"
 #include <CommonCrypto/CommonHMAC.h>
 
+#if __LP64__
+#define NSI "ld"
+#define NSU "lu"
+#else
+#define NSI "d"
+#define NSU "u"
+#endif
+
 NSString *const ASPResponseObjectErrorKey = @"ASPResponseObject";
 
 static long requestId = 0;
@@ -419,6 +427,7 @@ static NSString *appKey; // Represents AppKey for the app.
                               completionBlock: (void (^)(id, NSError *))completionBlock {
     AFHTTPRequestOperation *op = [self HTTPRequestOperationWithRequest:request
                                                                success:^(AFHTTPRequestOperation *operation, id responseObject) {
+                                                                   
                                                                    ASPConfiguration *config = [ASPConfiguration sharedConfig];
                                                                    NSString *directory = nil;
                                                                    if (config.tempFolderPath) {
@@ -453,6 +462,10 @@ static NSString *appKey; // Represents AppKey for the app.
                                                                    completionBlock(file, nil);
                                                                } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
 
+                                                                   NSString *resStr = [[NSString alloc] initWithData:operation.responseObject
+                                                                                                            encoding:NSUTF8StringEncoding];
+                                                                   NSLog(@"%@", resStr);
+                                                                   
                                                                    if ([self executeRequestWithId:requestId]) {
                                                                        NSMutableDictionary *userInfo = [error.userInfo mutableCopy];
                                                                        if (operation.responseObject) {
@@ -509,6 +522,7 @@ static NSString *appKey; // Represents AppKey for the app.
     // setting response serializer
     if ([responseContentType isEqualToString:@"application/json"]) {
         self.responseSerializer = [ASPJSONResponseSerializer serializer];
+        self.responseSerializer.acceptableContentTypes = [self.responseSerializer.acceptableContentTypes setByAddingObjectsFromArray:@[@"text/html"]];
     }
     else {
         self.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -526,6 +540,14 @@ static NSString *appKey; // Represents AppKey for the app.
 
     NSMutableString *resourcePath = [NSMutableString stringWithString:path];
     [pathParams enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+        
+        //Replace BOOL variable having value 1 with true and 0 with false.
+        if (obj == (void*)kCFBooleanTrue) {
+            obj = @"true";
+        } else if(obj == (void*)kCFBooleanFalse) {
+            obj = @"false";
+        }
+        
         [resourcePath replaceCharactersInRange:[resourcePath rangeOfString:[NSString stringWithFormat:@"%@%@%@", @"{", key, @"}"]]
                                     withString:[ASPApiClient escape:obj]];
     }];
@@ -540,7 +562,19 @@ static NSString *appKey; // Represents AppKey for the app.
     NSString* urlString = [[NSURL URLWithString:pathWithQueryParams relativeToURL:self.baseURL] absoluteString];
     urlString = [ASPApiClient sign:urlString];
     
-    if (files.count > 0) {
+    if (files.count == 1) {
+        request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+        [request setHTTPMethod:method];
+        //Track iOS SDK Usage
+        [request setValue:@"iOSSDK/v1.0" forHTTPHeaderField:@"x-saaspose-client"];
+        [files enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            NSURL *filePath = (NSURL *)obj;
+            NSData *fileData = [NSData dataWithContentsOfURL:filePath];
+            [request setValue:[self getMIMEType:filePath] forHTTPHeaderField:@"Content-Type"];
+            [request setValue:[NSString stringWithFormat:@"%"NSU, [fileData length]] forHTTPHeaderField:@"Content-length"];
+            [request setHTTPBody:fileData];
+        }];
+    } else if(files.count > 1) {
         request = [self.requestSerializer multipartFormRequestWithMethod:method
                                                                URLString:urlString
                                                               parameters:nil
@@ -552,17 +586,18 @@ static NSString *appKey; // Represents AppKey for the app.
                                                    }];
                                                    [files enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
                                                        NSURL *filePath = (NSURL *)obj;
-                                                      BOOL isSuccessfullyAppended = [formData appendPartWithFileURL:filePath name:key error:nil];
+                                                       BOOL isSuccessfullyAppended = [formData appendPartWithFileURL:filePath name:key error:nil];
                                                        NSLog(@"%d", isSuccessfullyAppended);
                                                    }];
                                                } error:nil];
-    }
-    else {
+    } else {
         if (formParams) {
-            request = [self.requestSerializer requestWithMethod:method
-                                                      URLString:urlString
-                                                     parameters:formParams
-                                                          error:nil];
+            request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlString]];
+            [request setHTTPMethod:method];
+            [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+            [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+            //Track Android SDK Usage
+            [request setValue:@"iOSSDK/v1.0" forHTTPHeaderField:@"x-saaspose-client"];
         }
         if (body) {
             request = [self.requestSerializer requestWithMethod:method
@@ -571,7 +606,7 @@ static NSString *appKey; // Represents AppKey for the app.
                                                           error:nil];
         }
     }
-
+    
     if([[request.URL absoluteString] hasSuffix:@"&"]) {
         request.URL = [NSURL URLWithString:
                        [[request.URL absoluteString] substringToIndex:[[request.URL absoluteString] length]-1]];
@@ -665,7 +700,15 @@ static NSString *appKey; // Represents AppKey for the app.
 
                 }
             }
-            else {
+            else if([queryParam isKindOfClass:[NSNumber class]] && kCFNumberCharType == CFNumberGetType((__bridge CFNumberRef)queryParam)) {
+                if([(NSNumber *)[queryParams valueForKey:key] boolValue]) {
+                    [requestUrl appendString:[NSString stringWithFormat:@"%@%@=%@", separator,
+                                              [ASPApiClient escape:key], @"true"]];
+                } else {
+                    [requestUrl appendString:[NSString stringWithFormat:@"%@%@=%@", separator,
+                                              [ASPApiClient escape:key], @"false"]];
+                }
+            } else {
                 [requestUrl appendString:[NSString stringWithFormat:@"%@%@=%@", separator,
                                           [ASPApiClient escape:key], [NSString stringWithFormat:@"%@", [queryParams valueForKey:key]]]];
             }
@@ -789,6 +832,13 @@ static NSString *appKey; // Represents AppKey for the app.
     //Add the encoded value to the current url as a signature parameter
     [mUnsignedURL appendFormat:@"&signature=%@", hash];
     return mUnsignedURL;
+}
+
+- (NSString *)getMIMEType:(NSURL *) fileURL {
+    NSString *fileExtension = [fileURL pathExtension];
+    NSString *UTI = (__bridge_transfer NSString *)UTTypeCreatePreferredIdentifierForTag(kUTTagClassFilenameExtension, (__bridge CFStringRef)fileExtension, NULL);
+    NSString *contentType = (__bridge_transfer NSString *)UTTypeCopyPreferredTagWithClass((__bridge CFStringRef)UTI, kUTTagClassMIMEType);
+    return contentType;
 }
 
 @end
