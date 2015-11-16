@@ -12,8 +12,8 @@ Aspose.Total for Cloud is implemented as a REST API. If you use SDK, it hides th
 
 Directory | Description
 --------- | -----------
-[Java Storage SDK](/tree/master/SDKs/Aspose.Storage_Cloud_SDK_For_Java)  |  Aspose.Storage Cloud SDK for Java.
-[PHP Storage SDK](/tree/master/SDKs/Aspose.Storage_Cloud_SDK_For_PHP)  | Aspose.Storage Cloud SDK for PHP.
-[Python Storage SDK](/tree/master/SDKs/Aspose.Storage_Cloud_SDK_For_Python)  | Aspose.Storage Cloud SDK for Python.
-[Objective C Storage SDK](/tree/master/SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C)  | Aspose.Storage Cloud SDK for Objective C.
-[Noe.js Storage SDK](/tree/master/SDKs/Aspose.Storage_Cloud_SDK_For_NodeJS)  | Aspose.Storage Cloud SDK for Node.js.
+[Java Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Java)  |  Aspose.Storage Cloud SDK for Java.
+[PHP Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_PHP)  | Aspose.Storage Cloud SDK for PHP.
+[Python Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Python)  | Aspose.Storage Cloud SDK for Python.
+[Objective C Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C)  | Aspose.Storage Cloud SDK for Objective C.
+[Noe.js Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_NodeJS)  | Aspose.Storage Cloud SDK for Node.js.
