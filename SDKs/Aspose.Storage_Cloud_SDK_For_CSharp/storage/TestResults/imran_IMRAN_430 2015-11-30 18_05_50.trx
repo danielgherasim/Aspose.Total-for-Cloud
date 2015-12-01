@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="c1bdd424-3801-4cbc-b049-191bcde69908" name="imran@IMRAN_430 2015-11-30 18:05:50" runUser="IMRAN_430\imran" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="c5409a7f-0a79-4d71-9e03-44237486fa86">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="imran_IMRAN_430 2015-11-30 18_05_50">
+      <DeploymentItem filename="D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\bin\Debug\Aspose.Storage_Cloud.dll" />
+      <DeploymentItem filename="C:\Users\Imran Anwar\Downloads\Json70r1\Bin\Net40\Newtonsoft.Json.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2015-11-30T18:05:50.0178924+05:00" queuing="2015-11-30T18:05:50.2358760+05:00" start="2015-11-30T18:05:50.2764038+05:00" finish="2015-11-30T18:05:50.6579015+05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="14" executed="14" error="0" failed="14" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="TestGetIsStorageExist" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="49059b85-87f1-f634-6d7e-6f8df1dc9f07">
+      <Execution id="47df83e4-29f3-404e-b52c-dcfb3bd88267" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestGetIsStorageExist" />
+    </UnitTest>
+    <UnitTest name="TestGetListFiles" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="ba58e54b-07f6-f64a-c045-64003858ed05">
+      <Execution id="5d8c9681-7295-4609-897e-f9a04acd7138" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestGetListFiles" />
+    </UnitTest>
+    <UnitTest name="TestPostMoveFolder" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="02b034bf-c115-2d4b-34e5-3f346b5b2968">
+      <Execution id="9778a74b-946d-4ec5-b995-a2a994e42584" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPostMoveFolder" />
+    </UnitTest>
+    <UnitTest name="TestPutCreate" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="3b1f8fdd-9a1a-abf9-89ee-ae5dc8240d86">
+      <Execution id="98b7679d-cb19-4f9c-9839-ca020626540e" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPutCreate" />
+    </UnitTest>
+    <UnitTest name="TestDeleteFolder" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="dab431a7-e791-9b8f-2a33-9d75b6a3dc52">
+      <Execution id="8d63f400-1540-493b-bc2c-5cbbd82bb33f" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestDeleteFolder" />
+    </UnitTest>
+    <UnitTest name="TestPutCopy" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="bc47c663-1126-2504-f958-20fb7260340e">
+      <Execution id="392eba98-17dd-4ad5-bbbb-adcd0bb4c743" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPutCopy" />
+    </UnitTest>
+    <UnitTest name="TestGetIsExist" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="26345001-3cdf-12c8-efd8-023e56f2cece">
+      <Execution id="af018455-e78f-4e88-a689-bd5d46b94481" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestGetIsExist" />
+    </UnitTest>
+    <UnitTest name="TestPostMoveFile" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="19de067b-ee24-afb3-5ce7-6547265acc02">
+      <Execution id="7d7ec4be-328d-432a-96b3-9227caacf8fc" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPostMoveFile" />
+    </UnitTest>
+    <UnitTest name="TestGetDownload" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="5f5e946b-cb96-b9a5-06ee-4da4ca7a5dc5">
+      <Execution id="81edcf69-ad2e-4e39-bc0d-1e51280350bb" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestGetDownload" />
+    </UnitTest>
+    <UnitTest name="TestDeleteFile" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="ed45dfb3-1d8a-fcfd-499c-e19da567933d">
+      <Execution id="51c9f226-bc61-4441-92dd-8e6ff55a884b" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestDeleteFile" />
+    </UnitTest>
+    <UnitTest name="TestPutCreateFolder" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="3660071e-3438-b08a-3afb-0a31e0ccca81">
+      <Execution id="37d0f712-4eef-4f0c-b2d2-4b7ab7a2b638" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPutCreateFolder" />
+    </UnitTest>
+    <UnitTest name="TestGetDiscUsage" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="324be9f3-8e21-a63c-3a81-29e62402dd70">
+      <Execution id="9a04396c-381c-4fb5-8b4e-ea9f0d7b9e23" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestGetDiscUsage" />
+    </UnitTest>
+    <UnitTest name="TestPutCopyFolder" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="7b72f0e1-352a-6744-bd96-9126f9deab04">
+      <Execution id="81d1e8ad-29e1-40cf-bd66-a359852662e0" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestPutCopyFolder" />
+    </UnitTest>
+    <UnitTest name="TestGetListFileVersions" storage="d:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storagetest\bin\debug\storagetest.dll" id="176b6f8b-f860-6fc1-4008-afe3210020d1">
+      <Execution id="24b238fc-dccd-4f45-b69b-b73349f5122b" />
+      <TestMethod codeBase="D:/aspose/swagger/swagger-codegen-2.0.17/aspose/csharp/StorageTest/bin/Debug/StorageTest.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="StorageTest.TestStorageApi, StorageTest, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="TestGetListFileVersions" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="02b034bf-c115-2d4b-34e5-3f346b5b2968" executionId="9778a74b-946d-4ec5-b995-a2a994e42584" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="176b6f8b-f860-6fc1-4008-afe3210020d1" executionId="24b238fc-dccd-4f45-b69b-b73349f5122b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="19de067b-ee24-afb3-5ce7-6547265acc02" executionId="7d7ec4be-328d-432a-96b3-9227caacf8fc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="26345001-3cdf-12c8-efd8-023e56f2cece" executionId="af018455-e78f-4e88-a689-bd5d46b94481" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="324be9f3-8e21-a63c-3a81-29e62402dd70" executionId="9a04396c-381c-4fb5-8b4e-ea9f0d7b9e23" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3660071e-3438-b08a-3afb-0a31e0ccca81" executionId="37d0f712-4eef-4f0c-b2d2-4b7ab7a2b638" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="3b1f8fdd-9a1a-abf9-89ee-ae5dc8240d86" executionId="98b7679d-cb19-4f9c-9839-ca020626540e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="49059b85-87f1-f634-6d7e-6f8df1dc9f07" executionId="47df83e4-29f3-404e-b52c-dcfb3bd88267" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="5f5e946b-cb96-b9a5-06ee-4da4ca7a5dc5" executionId="81edcf69-ad2e-4e39-bc0d-1e51280350bb" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7b72f0e1-352a-6744-bd96-9126f9deab04" executionId="81d1e8ad-29e1-40cf-bd66-a359852662e0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ba58e54b-07f6-f64a-c045-64003858ed05" executionId="5d8c9681-7295-4609-897e-f9a04acd7138" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="bc47c663-1126-2504-f958-20fb7260340e" executionId="392eba98-17dd-4ad5-bbbb-adcd0bb4c743" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="dab431a7-e791-9b8f-2a33-9d75b6a3dc52" executionId="8d63f400-1540-493b-bc2c-5cbbd82bb33f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ed45dfb3-1d8a-fcfd-499c-e19da567933d" executionId="51c9f226-bc61-4441-92dd-8e6ff55a884b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9778a74b-946d-4ec5-b995-a2a994e42584" testId="02b034bf-c115-2d4b-34e5-3f346b5b2968" testName="TestPostMoveFolder" computerName="IMRAN_430" duration="00:00:00.0398827" startTime="2015-11-30T18:05:50.2834087+05:00" endTime="2015-11-30T18:05:50.5498227+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9778a74b-946d-4ec5-b995-a2a994e42584">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestPostMoveFolder threw exception: 
+System.UriFormatException: Invalid URI: The hostname could not be parsed.</Message>
+          <StackTrace>    at System.Uri.CreateThis(String uri, Boolean dontEscape, UriKind uriKind)
+   at System.Uri..ctor(String uriString)
+   at System.UriBuilder..ctor(String uri)
+   at Com.Aspose.Storage.ApiInvoker.Sign(String url, String appKey) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 67
+   at Com.Aspose.Storage.ApiInvoker.invokeAPIInternal(String host, String path, String method, Boolean binaryResponse, Dictionary`2 queryParams, Object body, Dictionary`2 headerParams, Dictionary`2 formParams) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 128
+   at Com.Aspose.Storage.ApiInvoker.invokeAPI(String host, String path, String method, Dictionary`2 queryParams, Object body, Dictionary`2 headerParams, Dictionary`2 formParams) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 105
+   at Com.Aspose.Storage.Api.StorageApi.PostMoveFolder(String src, String dest, String storage, String destStorage) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 671
+   at StorageTest.TestStorageApi.TestPostMoveFolder() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 259
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="24b238fc-dccd-4f45-b69b-b73349f5122b" testId="176b6f8b-f860-6fc1-4008-afe3210020d1" testName="TestGetListFileVersions" computerName="IMRAN_430" duration="00:00:00.0084122" startTime="2015-11-30T18:05:50.5508258+05:00" endTime="2015-11-30T18:05:50.5608306+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="24b238fc-dccd-4f45-b69b-b73349f5122b">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestGetListFileVersions threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestGetListFileVersions() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 192
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="7d7ec4be-328d-432a-96b3-9227caacf8fc" testId="19de067b-ee24-afb3-5ce7-6547265acc02" testName="TestPostMoveFile" computerName="IMRAN_430" duration="00:00:00.0018225" startTime="2015-11-30T18:05:50.5618325+05:00" endTime="2015-11-30T18:05:50.5668352+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="7d7ec4be-328d-432a-96b3-9227caacf8fc">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestPostMoveFile threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestPostMoveFile() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 230
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="af018455-e78f-4e88-a689-bd5d46b94481" testId="26345001-3cdf-12c8-efd8-023e56f2cece" testName="TestGetIsExist" computerName="IMRAN_430" duration="00:00:00.0015916" startTime="2015-11-30T18:05:50.5678363+05:00" endTime="2015-11-30T18:05:50.5708381+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="af018455-e78f-4e88-a689-bd5d46b94481">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestGetIsExist threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestGetIsExist() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 154
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="9a04396c-381c-4fb5-8b4e-ea9f0d7b9e23" testId="324be9f3-8e21-a63c-3a81-29e62402dd70" testName="TestGetDiscUsage" computerName="IMRAN_430" duration="00:00:00.0016129" startTime="2015-11-30T18:05:50.5718392+05:00" endTime="2015-11-30T18:05:50.5748409+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9a04396c-381c-4fb5-8b4e-ea9f0d7b9e23">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestGetDiscUsage threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestGetDiscUsage() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 116
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="37d0f712-4eef-4f0c-b2d2-4b7ab7a2b638" testId="3660071e-3438-b08a-3afb-0a31e0ccca81" testName="TestPutCreateFolder" computerName="IMRAN_430" duration="00:00:00.0023630" startTime="2015-11-30T18:05:50.5758416+05:00" endTime="2015-11-30T18:05:50.5808460+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="37d0f712-4eef-4f0c-b2d2-4b7ab7a2b638">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestPutCreateFolder threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestPutCreateFolder() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 338
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="98b7679d-cb19-4f9c-9839-ca020626540e" testId="3b1f8fdd-9a1a-abf9-89ee-ae5dc8240d86" testName="TestPutCreate" computerName="IMRAN_430" duration="00:00:00.0016540" startTime="2015-11-30T18:05:50.5818463+05:00" endTime="2015-11-30T18:05:50.5848488+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="98b7679d-cb19-4f9c-9839-ca020626540e">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestPutCreate threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestPutCreate() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 317
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="47df83e4-29f3-404e-b52c-dcfb3bd88267" testId="49059b85-87f1-f634-6d7e-6f8df1dc9f07" testName="TestGetIsStorageExist" computerName="IMRAN_430" duration="00:00:00.0016350" startTime="2015-11-30T18:05:50.5858495+05:00" endTime="2015-11-30T18:05:50.5888516+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="47df83e4-29f3-404e-b52c-dcfb3bd88267">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestGetIsStorageExist threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestGetIsStorageExist() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 174
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="81edcf69-ad2e-4e39-bc0d-1e51280350bb" testId="5f5e946b-cb96-b9a5-06ee-4da4ca7a5dc5" testName="TestGetDownload" computerName="IMRAN_430" duration="00:00:00.0021522" startTime="2015-11-30T18:05:50.5898512+05:00" endTime="2015-11-30T18:05:50.5938544+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81edcf69-ad2e-4e39-bc0d-1e51280350bb">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestGetDownload threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestGetDownload() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 134
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="81d1e8ad-29e1-40cf-bd66-a359852662e0" testId="7b72f0e1-352a-6744-bd96-9126f9deab04" testName="TestPutCopyFolder" computerName="IMRAN_430" duration="00:00:00.0020172" startTime="2015-11-30T18:05:50.5948555+05:00" endTime="2015-11-30T18:05:50.5998599+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="81d1e8ad-29e1-40cf-bd66-a359852662e0">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestPutCopyFolder threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestPutCopyFolder() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 296
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="5d8c9681-7295-4609-897e-f9a04acd7138" testId="ba58e54b-07f6-f64a-c045-64003858ed05" testName="TestGetListFiles" computerName="IMRAN_430" duration="00:00:00.0016516" startTime="2015-11-30T18:05:50.6008602+05:00" endTime="2015-11-30T18:05:50.6048634+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="5d8c9681-7295-4609-897e-f9a04acd7138">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestGetListFiles threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestGetListFiles() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 211
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="392eba98-17dd-4ad5-bbbb-adcd0bb4c743" testId="bc47c663-1126-2504-f958-20fb7260340e" testName="TestPutCopy" computerName="IMRAN_430" duration="00:00:00.0016394" startTime="2015-11-30T18:05:50.6058641+05:00" endTime="2015-11-30T18:05:50.6088674+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="392eba98-17dd-4ad5-bbbb-adcd0bb4c743">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestPutCopy threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestPutCopy() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 273
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="8d63f400-1540-493b-bc2c-5cbbd82bb33f" testId="dab431a7-e791-9b8f-2a33-9d75b6a3dc52" testName="TestDeleteFolder" computerName="IMRAN_430" duration="00:00:00.0019035" startTime="2015-11-30T18:05:50.6098666+05:00" endTime="2015-11-30T18:05:50.6138702+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="8d63f400-1540-493b-bc2c-5cbbd82bb33f">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestDeleteFolder threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestDeleteFolder() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 96
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="51c9f226-bc61-4441-92dd-8e6ff55a884b" testId="ed45dfb3-1d8a-fcfd-499c-e19da567933d" testName="TestDeleteFile" computerName="IMRAN_430" duration="00:00:00.0024609" startTime="2015-11-30T18:05:50.6148697+05:00" endTime="2015-11-30T18:05:50.6198729+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="51c9f226-bc61-4441-92dd-8e6ff55a884b">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method StorageTest.TestStorageApi.TestDeleteFile threw exception: 
+System.ArgumentException: An item with the same key has already been added.</Message>
+          <StackTrace>    at System.ThrowHelper.ThrowArgumentException(ExceptionResource resource)
+   at System.Collections.Generic.Dictionary`2.Insert(TKey key, TValue value, Boolean add)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at Com.Aspose.Storage.ApiInvoker.addDefaultHeader(String key, String value) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\ApiInvoker.cs:line 32
+   at Com.Aspose.Storage.Api.StorageApi..ctor(String apiKey, String appSid, String basePath) in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\storage\src\Com\Aspose\Storage\Api\StorageApi.cs:line 13
+   at StorageTest.TestStorageApi.TestDeleteFile() in D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\StorageApiTest.cs:line 76
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

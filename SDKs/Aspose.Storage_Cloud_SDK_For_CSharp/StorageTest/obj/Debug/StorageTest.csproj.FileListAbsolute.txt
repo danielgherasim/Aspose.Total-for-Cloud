@@ -1,0 +1,10 @@
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\bin\Debug\StorageTest.dll
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\bin\Debug\StorageTest.pdb
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\bin\Debug\Aspose.Storage_Cloud.dll
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\bin\Debug\Newtonsoft.Json.dll
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\bin\Debug\Aspose.Storage_Cloud.pdb
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\bin\Debug\Newtonsoft.Json.pdb
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\bin\Debug\Newtonsoft.Json.xml
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\obj\Debug\StorageTest.csprojResolveAssemblyReference.cache
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\obj\Debug\StorageTest.dll
+D:\aspose\swagger\swagger-codegen-2.0.17\aspose\csharp\StorageTest\obj\Debug\StorageTest.pdb
