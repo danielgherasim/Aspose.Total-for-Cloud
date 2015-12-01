@@ -75,18 +75,14 @@ namespace StorageTest
         [TestMethod()]
         public void TestDeleteFile()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string versionId = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.RemoveFileResponse expected = null; // TODO: Initialize to an appropriate value
+            string Path = "testfile.txt"; 
+            string versionId = null; 
+            string storage = null;
+
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path));
             Com.Aspose.Storage.Model.RemoveFileResponse actual;
             actual = target.DeleteFile(Path, versionId, storage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual("200", actual.Code);            
         }
 
         /// <summary>
@@ -94,19 +90,17 @@ namespace StorageTest
         ///</summary>
         [TestMethod()]
         public void TestDeleteFolder()
-        {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            bool recursive = false; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.RemoveFolderResponse expected = null; // TODO: Initialize to an appropriate value
+        {    
+            string Path = "testfolder";
+            string storage = null; 
+            bool recursive = false;
+
+            target.PutCreateFolder(Path, null, null);
+
             Com.Aspose.Storage.Model.RemoveFolderResponse actual;
             actual = target.DeleteFolder(Path, storage, recursive);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual("200", actual.Code);
+            
         }
 
         /// <summary>
@@ -114,17 +108,14 @@ namespace StorageTest
         ///</summary>
         [TestMethod()]
         public void TestGetDiscUsage()
-        {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.DiscUsageResponse expected = null; // TODO: Initialize to an appropriate value
+        {    
+            string storage = null; 
+
             Com.Aspose.Storage.Model.DiscUsageResponse actual;
             actual = target.GetDiscUsage(storage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+
+            Assert.AreEqual("200", actual.Code);
+            
         }
 
         /// <summary>
@@ -133,18 +124,16 @@ namespace StorageTest
         [TestMethod()]
         public void TestGetDownload()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string versionId = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.ResponseMessage expected = null; // TODO: Initialize to an appropriate value
+            string Path = "testfile.txt"; 
+            string versionId = null; 
+            string storage = null;
+
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path));            
             Com.Aspose.Storage.Model.ResponseMessage actual;
             actual = target.GetDownload(Path, versionId, storage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+
+            Assert.AreNotEqual("", actual);
+            
         }
 
         /// <summary>
@@ -153,18 +142,15 @@ namespace StorageTest
         [TestMethod()]
         public void TestGetIsExist()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string versionId = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.FileExistResponse expected = null; // TODO: Initialize to an appropriate value
+            string Path = "testfile.txt"; 
+            string versionId = null; 
+            string storage = null;
+
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path)); 
             Com.Aspose.Storage.Model.FileExistResponse actual;
             actual = target.GetIsExist(Path, versionId, storage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual("200", actual.Code);
+            
         }
 
         /// <summary>
@@ -173,16 +159,13 @@ namespace StorageTest
         [TestMethod()]
         public void TestGetIsStorageExist()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string name = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.StorageExistResponse expected = null; // TODO: Initialize to an appropriate value
+            string name = "AsposeDropboxStorage"; 
+
+            
             Com.Aspose.Storage.Model.StorageExistResponse actual;
             actual = target.GetIsStorageExist(name);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual("200", actual.Code);
+            
         }
 
         /// <summary>
@@ -191,17 +174,15 @@ namespace StorageTest
         [TestMethod()]
         public void TestGetListFileVersions()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.FileVersionsResponse expected = null; // TODO: Initialize to an appropriate value
+            string Path = "files"; 
+            string storage = null; 
+
+            
             Com.Aspose.Storage.Model.FileVersionsResponse actual;
+
             actual = target.GetListFileVersions(Path, storage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual("200", actual.Code);
+            
         }
 
         /// <summary>
@@ -210,17 +191,13 @@ namespace StorageTest
         [TestMethod()]
         public void TestGetListFiles()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.ResponseMessage expected = null; // TODO: Initialize to an appropriate value
+            string Path = "files"; 
+            string storage = null; 
+
             Com.Aspose.Storage.Model.ResponseMessage actual;
             actual = target.GetListFiles(Path, storage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual("Ok", actual.Status);
+            
         }
 
         /// <summary>
@@ -229,20 +206,17 @@ namespace StorageTest
         [TestMethod()]
         public void TestPostMoveFile()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string src = string.Empty; // TODO: Initialize to an appropriate value
-            string dest = string.Empty; // TODO: Initialize to an appropriate value
-            string versionId = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            string destStorage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.MoveFileResponse expected = null; // TODO: Initialize to an appropriate value
+            string name = "testfile.txt"; 
+            string dest = "new-testfile.txt"; 
+            string versionId = null; 
+            string storage = null; 
+            string destStorage = null;
+
+            target.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + name)); 
             Com.Aspose.Storage.Model.MoveFileResponse actual;
-            actual = target.PostMoveFile(src, dest, versionId, storage, destStorage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            actual = target.PostMoveFile(name, dest, versionId, storage, destStorage);
+            Assert.AreEqual("200", actual.Code);
+            
         }
 
         /// <summary>
@@ -251,19 +225,17 @@ namespace StorageTest
         [TestMethod()]
         public void TestPostMoveFolder()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string src = string.Empty; // TODO: Initialize to an appropriate value
-            string dest = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            string destStorage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.MoveFolderResponse expected = null; // TODO: Initialize to an appropriate value
+            string src = "test0"; 
+            string dest = "test1"; 
+            string storage = null; 
+            string destStorage = null;
+
+            target.PutCreateFolder(src, storage, destStorage);
+
             Com.Aspose.Storage.Model.MoveFolderResponse actual;
             actual = target.PostMoveFolder(src, dest, storage, destStorage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual("200", actual.Code);
+            
         }
 
         /// <summary>
@@ -272,21 +244,18 @@ namespace StorageTest
         [TestMethod()]
         public void TestPutCopy()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string newdest = string.Empty; // TODO: Initialize to an appropriate value
-            string versionId = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            string destStorage = string.Empty; // TODO: Initialize to an appropriate value
-            byte[] file = null; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.ResponseMessage expected = null; // TODO: Initialize to an appropriate value
+            string Path = "testfile.txt";
+            string newdest = "new-testfile.txt"; 
+            string versionId = null; 
+            string storage = null; 
+            string destStorage = null;
+            byte[] file = System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path);
+
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path)); 
             Com.Aspose.Storage.Model.ResponseMessage actual;
             actual = target.PutCopy(Path, newdest, versionId, storage, destStorage, file);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreNotEqual("", actual);
+            
         }
 
         /// <summary>
@@ -295,19 +264,17 @@ namespace StorageTest
         [TestMethod()]
         public void TestPutCopyFolder()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string newdest = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            string destStorage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.ResponseMessage expected = null; // TODO: Initialize to an appropriate value
+            string Path = "testfolder";
+            string newdest = "new-testfolder"; 
+            string storage = null; 
+            string destStorage = null;
+
+            target.PutCreateFolder(Path, storage, destStorage);
+
             Com.Aspose.Storage.Model.ResponseMessage actual;
             actual = target.PutCopyFolder(Path, newdest, storage, destStorage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreNotEqual("", actual);
+            
         }
 
         /// <summary>
@@ -316,19 +283,16 @@ namespace StorageTest
         [TestMethod()]
         public void TestPutCreate()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string versionId = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            byte[] file = null; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.ResponseMessage expected = null; // TODO: Initialize to an appropriate value
+            string Path = "testfile.txt"; 
+            string versionId = null; 
+            string storage = null;
+            byte[] file = System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path); 
+
+            
             Com.Aspose.Storage.Model.ResponseMessage actual;
             actual = target.PutCreate(Path, versionId, storage, file);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreEqual(200, actual.Code);
+            
         }
 
         /// <summary>
@@ -337,18 +301,14 @@ namespace StorageTest
         [TestMethod()]
         public void TestPutCreateFolder()
         {
-            string apiKey = string.Empty; // TODO: Initialize to an appropriate value
-            string appSid = string.Empty; // TODO: Initialize to an appropriate value
-            string basePath = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Api.StorageApi target = new Com.Aspose.Storage.Api.StorageApi(apiKey, appSid, basePath); // TODO: Initialize to an appropriate value
-            string Path = string.Empty; // TODO: Initialize to an appropriate value
-            string storage = string.Empty; // TODO: Initialize to an appropriate value
-            string destStorage = string.Empty; // TODO: Initialize to an appropriate value
-            Com.Aspose.Storage.Model.ResponseMessage expected = null; // TODO: Initialize to an appropriate value
+            string Path = "NewFolder_one"; 
+            string storage = null; 
+            string destStorage = null; 
+            
             Com.Aspose.Storage.Model.ResponseMessage actual;
             actual = target.PutCreateFolder(Path, storage, destStorage);
-            Assert.AreEqual(expected, actual);
-            Assert.Inconclusive("Verify the correctness of this test method.");
+            Assert.AreNotEqual("", actual);
+            
         }
 
     }
