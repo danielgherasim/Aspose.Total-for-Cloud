@@ -17,19 +17,21 @@ namespace AsposeStorage
                 System.Diagnostics.Debug.WriteLine("\n\nFetching the results...");
                 StorageApi storageApi = new StorageApi("xxx", "xxx", "http://api.aspose.com/v1.1");
 
-                string fileName = "test_multi_pages.docx";
+                string fileName = "BarcodeCloud-Format-Support.png";
 
                 System.Diagnostics.Debug.WriteLine(storageApi.PutCreate(fileName,null, null, System.IO.File.ReadAllBytes("\\temp\\"+fileName)));
 
+                //System.Diagnostics.Debug.WriteLine(storageApi.PutCreateFolder(fileName, null, null));
+
                 //storageApi.PutCreate(fileName, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + fileName));
 
-                ////System.Diagnostics.Debug.WriteLine(storageApi.GetDownload(fileName, null, null)+"\n\nthese were the file contents");
+                //System.Diagnostics.Debug.WriteLine(storageApi.GetDownload(fileName, null, null)+"\n\nthese were the file contents");
 
 
                 byte[] responseStream = storageApi.GetDownload(fileName, null, null).ResponseStream;
                 System.IO.File.WriteAllBytes("\\temp\\new_" + fileName, responseStream);
 
-                //System.Diagnostics.Debug.WriteLine(storageApi.GetListFiles("", ""));
+                ////System.Diagnostics.Debug.WriteLine(storageApi.GetListFiles("", ""));
 
                 //System.IO.File.WriteAllBytes("\\temp\\new_" + fileName, System.IO.File.ReadAllBytes("\\temp\\"+fileName));
 

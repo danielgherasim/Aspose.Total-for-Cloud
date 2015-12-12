@@ -16,6 +16,7 @@ namespace StorageTest
         public StorageApi target;
         public TestStorageApi()
         {
+			//Please provide your AppSID and APIKey
             target = new StorageApi("xxx", "xxx", "http://api.aspose.com/v1.1");
         }
 
@@ -251,9 +252,9 @@ namespace StorageTest
             string destStorage = null;
             byte[] file = System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path);
 
-            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path)); 
+            target.PutCreate(Path, null, null, file); 
             Com.Aspose.Storage.Model.ResponseMessage actual;
-            actual = target.PutCopy(Path, newdest, versionId, storage, destStorage, file);
+            actual = target.PutCopy(Path, newdest, versionId, storage, destStorage, null);
             Assert.AreNotEqual("", actual);
             
         }

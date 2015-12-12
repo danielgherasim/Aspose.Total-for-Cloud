@@ -14,6 +14,14 @@ using Com.Aspose.Storage.Model;
 
 namespace Com.Aspose.Storage
 {
+
+    public struct FileInfo
+    {
+        public string Name;
+        public string MimeType;
+        public byte[] file;
+    }
+
     public class ApiInvoker
     {
       private static readonly ApiInvoker _instance = new ApiInvoker();
@@ -41,13 +49,28 @@ namespace Com.Aspose.Storage
         {
         try
         {
+                if (json.StartsWith("{") || json.StartsWith("["))
             return JsonConvert.DeserializeObject(json, type);
+                else
+                {
+                    System.Xml.XmlDocument xmlDoc = new System.Xml.XmlDocument();
+                    xmlDoc.LoadXml(json);
+                    return JsonConvert.SerializeXmlNode(xmlDoc);
         }
+
+            }
             catch (IOException e)
             {
           throw new ApiException(500, e.Message);
         }
-
+            catch (JsonSerializationException jse)
+            {
+                throw new ApiException(500, jse.Message);
+      }
+            catch (System.Xml.XmlException xmle)
+            {
+                throw new ApiException(500, xmle.Message);
+            }
       }
         public static object deserialize(byte[] BinaryData, Type type)
         {
@@ -110,6 +133,16 @@ namespace Com.Aspose.Storage
           return invokeAPIInternal(host, path, method, true, queryParams, body, headerParams, formParams) as byte[];
       }
 
+      public static void CopyTo(Stream source, Stream destination, int bufferSize = 81920)
+      {
+          byte[] array = new byte[bufferSize];
+          int count;
+          while ((count = source.Read(array, 0, array.Length)) != 0)
+          {
+              destination.Write(array, 0, count);
+          }
+      }
+
         private object invokeAPIInternal(string host, string path, string method, bool binaryResponse, Dictionary<String, String> queryParams, object body, Dictionary<String, String> headerParams, Dictionary<String, object> formParams)
         {
 
@@ -124,23 +157,27 @@ namespace Com.Aspose.Storage
 
           host = host.EndsWith("/") ? host.Substring(0, host.Length - 1) : host;
 
-
             path = Sign(host + path, this.defaultHeaderMap[API_KEY]);
 
-            
             var client = WebRequest.Create(path);
           client.Method = method;
 
           byte[] formData = null;
           if (formParams.Count > 0)
           {
-                //string formDataBoundary = String.Format("----------{0:N}", Guid.NewGuid());
-                //client.ContentType = "multipart/form-data; boundary=" + formDataBoundary;
-                //formData = GetMultipartFormData(formParams, formDataBoundary);
-                //client.ContentLength = formData.Length;
-                client.ContentType = "multipart/form-data";
-                formData = GetMultipartFormData(formParams, "");
-                client.ContentLength = formData.Length;
+              if (formParams.Count > 1)
+              {
+                  string formDataBoundary = String.Format("Somthing");
+                  client.ContentType = "multipart/form-data; boundary=" + formDataBoundary;
+                  formData = GetMultipartFormData(formParams, formDataBoundary);
+              }
+              else
+              {
+                  client.ContentType = "multipart/form-data";
+                  formData = GetMultipartFormData(formParams, "");
+                  
+              }
+              client.ContentLength = formData.Length;
 
           }
           else
@@ -170,10 +207,12 @@ namespace Com.Aspose.Storage
                       {
                           requestStream.Write(formData, 0, formData.Length);
                       }
-
+                      if (body != null)
+                      {
                       var swRequestWriter = new StreamWriter(requestStream);
                       swRequestWriter.Write(serialize(body));
                       swRequestWriter.Close();
+                  }
                   }
                   break;
               default:
@@ -193,7 +232,7 @@ namespace Com.Aspose.Storage
               {
                   using (var memoryStream = new MemoryStream())
                   {
-                      webResponse.GetResponseStream().CopyTo(memoryStream);
+                      CopyTo(webResponse.GetResponseStream(), memoryStream);
                       return memoryStream.ToArray();
                   }
               }
@@ -222,42 +261,61 @@ namespace Com.Aspose.Storage
       private static byte[] GetMultipartFormData(Dictionary<string, object> postParameters, string boundary)
       {
           Stream formDataStream = new System.IO.MemoryStream();
-            //bool needsCLRF = false;
+          bool needsCLRF = false;
 
-          foreach (var param in postParameters)
+          if (postParameters.Count > 1)
           {
-              // Thanks to feedback from commenters, add a CRLF to allow multiple parameters to be added.
-              // Skip it on the first parameter, add it to subsequent parameters.
-                //if (needsCLRF)
-                //    formDataStream.Write(Encoding.UTF8.GetBytes("\r\n"), 0, Encoding.UTF8.GetByteCount("\r\n"));
 
-                //needsCLRF = true;
-
-              if (param.Value is byte[])
+              foreach (var param in postParameters)
               {
-                    //string postData = string.Format("--{0}\r\nContent-Disposition: form-data; name=\"{1}\"; filename=\"{1}\"\r\nContent-Type: {2}\r\n\r\n",
-                    //    boundary,
-                    //    param.Key,
-                    //    "application/octet-stream");
-                    //formDataStream.Write(Encoding.UTF8.GetBytes(postData), 0, Encoding.UTF8.GetByteCount(postData));
+                  // Thanks to feedback from commenters, add a CRLF to allow multiple parameters to be added.
+                  // Skip it on the first parameter, add it to subsequent parameters.
+                  if (needsCLRF)
+                      formDataStream.Write(Encoding.UTF8.GetBytes("\r\n"), 0, Encoding.UTF8.GetByteCount("\r\n"));
 
-                  // Write the file data directly to the Stream, rather than serializing it to a string.
-                  formDataStream.Write((param.Value as byte[]), 0, (param.Value as byte[]).Length);
+                  needsCLRF = true;
+                  var fileInfo = (FileInfo)param.Value;
+                  if (param.Value is FileInfo)
+                  {
+
+                      string postData = string.Format("--{0}\r\nContent-Disposition: form-data; name=\"{1}\"; filename=\"{1}\"\r\nContent-Type: {2}\r\n\r\n",
+                          boundary,
+                          param.Key,
+                          fileInfo.MimeType);
+                      formDataStream.Write(Encoding.UTF8.GetBytes(postData), 0, Encoding.UTF8.GetByteCount(postData));
+
+                      // Write the file data directly to the Stream, rather than serializing it to a string.
+                      formDataStream.Write((fileInfo.file as byte[]), 0, (fileInfo.file as byte[]).Length);
+                  }
+                  else
+                  {
+                      string postData = string.Format("--{0}\r\nContent-Disposition: form-data; name=\"{1}\"\r\n\r\n{2}",
+                          boundary,
+                          param.Key,
+                          fileInfo.file);
+                      formDataStream.Write(Encoding.UTF8.GetBytes(postData), 0, Encoding.UTF8.GetByteCount(postData));
+                  }
               }
-              else
+              // Add the end of the request.  Start with a newline
+              string footer = "\r\n--" + boundary + "--\r\n";
+              formDataStream.Write(Encoding.UTF8.GetBytes(footer), 0, Encoding.UTF8.GetByteCount(footer));
+          }
+          else
+          {
+              foreach (var param in postParameters)
               {
-                    //string postData = string.Format("--{0}\r\nContent-Disposition: form-data; name=\"{1}\"\r\n\r\n{2}",
-                    //    boundary,
-                    //    param.Key,
-                    //    param.Value);
-                  string postData = (string)param.Value;
-                  formDataStream.Write(Encoding.UTF8.GetBytes(postData), 0, Encoding.UTF8.GetByteCount(postData));
+                  if (param.Value is byte[])
+                  {
+                      // Write the file data directly to the Stream, rather than serializing it to a string.
+                      formDataStream.Write((param.Value as byte[]), 0, (param.Value as byte[]).Length);
+                  }
+                  else
+                  {
+                      string postData = (string)param.Value;
+                      formDataStream.Write(Encoding.UTF8.GetBytes(postData), 0, Encoding.UTF8.GetByteCount(postData));
+                  }
               }
           }
-
-          // Add the end of the request.  Start with a newline
-            //string footer = "\r\n--" + boundary + "--\r\n";
-            //formDataStream.Write(Encoding.UTF8.GetBytes(footer), 0, Encoding.UTF8.GetByteCount(footer));
 
           // Dump the Stream into a byte[]
           formDataStream.Position = 0;
@@ -282,8 +340,16 @@ namespace Com.Aspose.Storage
         {
             return value.ToString();
   }
+        public String ToPathValue(int? value)
+        {
+            return value.ToString();
+        }
 
         public String ToPathValue(float value)
+        {
+            return value.ToString();
+        }
+        public String ToPathValue(float? value)
         {
             return value.ToString();
         }
@@ -311,5 +377,3 @@ namespace Com.Aspose.Storage
         }
     }
 }
-
-

@@ -380,15 +380,16 @@
       public ResponseMessage PutCopy (string Path, string newdest, string versionId, string storage, string destStorage, byte[] file) {
         // create path and map variables
         var ResourcePath = "/storage/file/{Path}/?appSid={appSid}&amp;newdest={newdest}&amp;versionId={versionId}&amp;storage={storage}&amp;destStorage={destStorage}".Replace("{format}","json");
+        //  resourcePath = '/storage/file/{path}/?appSid={appSid}&amp;newdest={newdest}&amp;versionId={versionId}&amp;storage={storage}&amp;destStorage={destStorage}'
 		ResourcePath = Regex.Replace(ResourcePath, "\\*", "").Replace("&amp;", "&").Replace("/?", "?").Replace("toFormat={toFormat}", "format={format}");
-
+      
         // query params
         var queryParams = new Dictionary<String, String>();
         var headerParams = new Dictionary<String, String>();
         var formParams = new Dictionary<String, object>();
 
         // verify required params are set
-        if (Path == null || newdest == null || file == null ) {
+        if (Path == null || newdest == null ) {
            throw new ApiException(400, "missing required params");
         }
         if (Path == null){
@@ -758,7 +759,8 @@
       /// <returns></returns>
       public ResponseMessage PutCreateFolder (string Path, string storage, string destStorage) {
         // create path and map variables
-        var ResourcePath = "/storage/folder/{Path}/?appSid={appSid}&amp;storage={storage}&amp;destStorage={destStorage}".Replace("{format}","json");
+          var ResourcePath = "/storage/folder/{Path}/?appSid={appSid}&amp;storage={storage}&amp;destStorage={destStorage}".Replace("{format}", "json");
+        //    resourcePath = '/storage/folder/{path}/?appSid={appSid}&amp;storage={storage}&amp;destStorage={destStorage}'
 		ResourcePath = Regex.Replace(ResourcePath, "\\*", "").Replace("&amp;", "&").Replace("/?", "?").Replace("toFormat={toFormat}", "format={format}");
 
         // query params
