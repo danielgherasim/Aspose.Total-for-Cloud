@@ -8,8 +8,8 @@ class StorageTests < Minitest::Test
 	include AsposeStorageCloud
 
 	def setup
-        #Get App key and App SID from https://cloud.aspose.com
-        AsposeApp.app_key_and_sid("", "")
+                #Get App key and App SID from https://cloud.aspose.com
+                AsposeApp.app_key_and_sid("", "")
 		@storage_api = StorageApi.new
 	end
 
@@ -31,7 +31,7 @@ class StorageTests < Minitest::Test
 	 	assert(response, message="Failed to check the disk usage of the current account.")
 	end
 
-    def test_get_is_exist
+        def test_get_is_exist
 		file_name = "SampleWordDocument.docx"
 		upload_file(file_name)
 		response = @storage_api.get_is_exist(file_name)
