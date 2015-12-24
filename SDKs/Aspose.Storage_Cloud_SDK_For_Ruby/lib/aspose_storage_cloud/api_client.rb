@@ -7,12 +7,10 @@ require 'uri'
 require 'openssl'
 require 'base64'
 require 'rexml/document'
-require_relative 'aspose_app'
 
 module AsposeStorageCloud
   class ApiClient
-     
-    include AsposeStorageCloud::AsposeApp
+    
     attr_accessor :host
 
     # Defines the headers to be used in HTTP requests of all API calls by default.
@@ -111,13 +109,13 @@ module AsposeStorageCloud
       url_to_sign = "#{parsed_url.scheme}://#{parsed_url.host}#{parsed_url.path}"
       url_to_sign += "?#{parsed_url.query}" if parsed_url.query
       if parsed_url.query
-        url_to_sign += "&appSID=#{APP_SID}"
+        url_to_sign += "&appSID=#{AsposeApp.app_sid}"
       else
-        url_to_sign += "?appSID=#{APP_SID}"
+        url_to_sign += "?appSID=#{AsposeApp.app_sid}"
       end  
         
       # create a signature using the private key and the URL
-      raw_signature = OpenSSL::HMAC.digest(OpenSSL::Digest.new('sha1'), APP_KEY, url_to_sign)
+      raw_signature = OpenSSL::HMAC.digest(OpenSSL::Digest.new('sha1'), AsposeApp.app_key, url_to_sign)
         
       #Convert raw to encoded string
       signature = Base64.strict_encode64(raw_signature).tr('+/', '-_')

@@ -1,6 +1,20 @@
 module AsposeStorageCloud
-  module AsposeApp
-  	APP_SID = "0B17F60A-6D69-426B-9ABD-79F35A6E9F7B"
-  	APP_KEY = "53b8b19adffa41a3e87dbbd8858977ae" 
+  class AsposeApp
+    
+    @@app_key
+    @app_sid
+    
+    def AsposeApp.app_key_and_sid(app_key, app_sid)
+      @@app_key = app_key
+      @@app_sid = app_sid
+    end
+    
+    def AsposeApp.app_key
+      @@app_key
+    end
+
+    def AsposeApp.app_sid
+      @@app_sid
+    end
   end
 end

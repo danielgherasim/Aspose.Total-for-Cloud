@@ -2,6 +2,7 @@
 # Common files
 require_relative 'aspose_storage_cloud/api_client'
 require_relative 'aspose_storage_cloud/api_error'
+require_relative 'aspose_storage_cloud/aspose_app'
 require_relative 'aspose_storage_cloud/version'
 require_relative 'aspose_storage_cloud/configuration'
 
