@@ -8,8 +8,8 @@ class StorageTests < Minitest::Test
 	include AsposeStorageCloud
 
 	def setup
-                #Get App key and App SID from https://cloud.aspose.com
-                AsposeApp.app_key_and_sid("", "")
+        #Get App key and App SID from https://cloud.aspose.com
+        AsposeApp.app_key_and_sid("APP_KEY", "APP_SID")
 		@storage_api = StorageApi.new
 	end
 

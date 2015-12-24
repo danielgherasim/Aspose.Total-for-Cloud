@@ -92,7 +92,9 @@ module AsposeStorageCloud
     # * :url describes the URL to sign
     
     def sign(url, query_params)
-
+        
+      fail "Please set Aspose App key and SID first. You can get App key and App SID from https://cloud.aspose.com" if AsposeApp.app_key.nil? || AsposeApp.app_sid.nil?
+      
       url = url[0..-2] if url[-1].eql? '/'
 
       unless query_params.empty?
