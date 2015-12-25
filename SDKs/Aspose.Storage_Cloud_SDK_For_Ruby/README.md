@@ -15,13 +15,13 @@ class Storage
   def initialize
     #Get App key and App SID from https://cloud.aspose.com
     AsposeApp.app_key_and_sid("APP_KEY", "APP_SID")
-		@storage_api = StorageApi.new  
+    @storage_api = StorageApi.new  
   end
   
   def get_aspose_disc_usage
-	 	disc_usage_response = @storage_api.get_disc_usage()
-	 	puts "Used Size: #{disc_usage_response.disc_usage.used_size} Total Size: #{disc_usage_response.disc_usage.total_size}"
-	end
+    disc_usage_response = @storage_api.get_disc_usage()
+    puts "Used Size: #{disc_usage_response.disc_usage.used_size} Total Size: #{disc_usage_response.disc_usage.total_size}"
+  end
   
 end
 ```
