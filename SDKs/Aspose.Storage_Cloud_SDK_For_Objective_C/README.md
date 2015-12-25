@@ -1,5 +1,5 @@
 # Aspose.Storage_Cloud_SDK_For_Objective_C
-This SDK lets users use Aspose Cloud Storage APIs in their iOS app.
+This SDK lets users use Aspose Cloud Storage APIs in their iOS app quickly and easily.
 
 ### Cocoapods
 
