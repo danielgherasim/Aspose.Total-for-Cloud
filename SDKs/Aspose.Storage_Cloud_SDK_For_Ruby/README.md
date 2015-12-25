@@ -23,6 +23,7 @@ class Storage
   end
   
   def get_aspose_disc_usage
+    #Check the disk usage of the current account.
     disc_usage_response = @storage_api.get_disc_usage()
     puts "Used Size: #{disc_usage_response.disc_usage.used_size} Total Size: #{disc_usage_response.disc_usage.total_size}"
   end
