@@ -7,7 +7,7 @@ You can simply install AsposeStorageCloud with gem:
 `gem install aspose_storage_cloud`
 
 ##Usage
-An example is given below to give you a quick preview of how APIs of this SDK can be called.
+APIs of this SDK can be called as follows:
 
 ```ruby
 require 'aspose_storage_cloud'
