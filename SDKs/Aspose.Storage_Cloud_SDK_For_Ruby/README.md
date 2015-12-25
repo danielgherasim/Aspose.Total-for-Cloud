@@ -31,7 +31,7 @@ class Storage
 end
 ```
 ## Unit Tests
-To help you get started we also provided [unit test coverage](https://github.com/asposetotal/Aspose_Total_Cloud/blob/master/SDKs/Aspose.Storage_Cloud_SDK_For_Ruby/test/storage_tests.rb) to Aspose.Storage APIs.
+Aspose Storage SDK includes a suite of unit tests within the [test](https://github.com/asposetotal/Aspose_Total_Cloud/blob/master/SDKs/Aspose.Storage_Cloud_SDK_For_Ruby/test/storage_tests.rb) subdirectory. These Unit Tests also serves as examples of how to use the Aspose Storage SDK.
 
 ## Contact
 Your feedback is very important to us. Please email us all your queries and feedback at marketplace@aspose.com.
