@@ -1,5 +1,5 @@
 # Aspose.Storage Cloud SDK For Ruby
-This SDK lets users use Aspose Cloud Storage APIs in their web app.
+This SDK lets users use [Aspose Cloud Storage APIs](http://api.aspose.com/v1.1/swagger/ui/index) in their web app.
 
 ## Installing
 You can simply install AsposeStorageCloud with gem:
