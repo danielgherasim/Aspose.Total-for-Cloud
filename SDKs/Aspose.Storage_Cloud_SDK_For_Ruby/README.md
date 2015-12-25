@@ -8,7 +8,7 @@ You can simply install AsposeStorageCloud with gem:
 
 ##Usage
 ```ruby
-class AsposeStorage
+class Storage
 
   include AsposeStorageCloud
   
