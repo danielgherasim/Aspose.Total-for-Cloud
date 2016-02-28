@@ -30,8 +30,8 @@ public class StorageUnitTest {
     public StorageUnitTest(){
 
         BASE_URL = "http://api.aspose.com/v1.1";
-        APP_SID = "9cfba320-5caa-41e3-8015-d6d5c9e887c9";
-        APP_KEY = "e2e647f60f3f95cb193a84c22d6b57fc";
+        APP_SID = "****";
+        APP_KEY = "****";
 
         storageApi = new StorageApi(BASE_URL,APP_KEY,APP_SID);
     }
