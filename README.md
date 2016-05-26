@@ -16,6 +16,6 @@ Directory | Description
 [PHP Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_PHP)  | Aspose.Storage Cloud SDK for PHP.
 [Python Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Python)  | Aspose.Storage Cloud SDK for Python.
 [Objective C Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C)  | Aspose.Storage Cloud SDK for Objective C.
-[Noe.js Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_NodeJS)  | Aspose.Storage Cloud SDK for Node.js.
+[Node.js Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_NodeJS)  | Aspose.Storage Cloud SDK for Node.js.
 [Ruby Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Ruby)  | Aspose.Storage Cloud SDK for Ruby.
 [Perl Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Perl)  | Aspose.Storage Cloud SDK for Perl.
