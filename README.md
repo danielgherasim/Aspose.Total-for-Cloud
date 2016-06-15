@@ -18,7 +18,6 @@ Directory | Description
 
 + **Website:** [www.aspose.com](http://www.aspose.com)
 + **Product Home:** [Aspose.Total for Cloud](http://www.aspose.com/products/total/cloud)
-+ **Download:** [Download Aspose.Total for Cloud](http://www.aspose.com/downloads/total/cloud)
-+ **Documentation:** [Aspose.Total for Cloud Documentation](http://www.aspose.com/docs/display/totalnet/Home)
++ **Documentation:** [Aspose.Total for Cloud Documentation](http://www.aspose.com/docs/display/totalcloud/Home)
 + **Forum:** [Aspose.Total for Cloud Forum](http://www.aspose.com/community/forums/aspose.total-product-family/442/showforum.aspx)
 + **Blog:** [Aspose.Total for Cloud Blog](http://www.aspose.com/blogs/aspose-products/aspose-total-product-family.html)
