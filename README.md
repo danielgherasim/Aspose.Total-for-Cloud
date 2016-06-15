@@ -1,21 +1,24 @@
-# Aspose.Total for Cloud
-This repository contains examples and SDKs for [Aspose.Total for Cloud](http://www.aspose.com/cloud/total-api.aspx).
+##Aspose.Total for Cloud
+[Aspose.Total for Cloud](http://www.aspose.com/products/total/cloud) is a REST based document generation, conversion and automation platform for developers in the cloud. It makes it easier for Web and Mobile Apps developers to work with Microsoft Word documents, Excel spreadsheets, PowerPoint presentations, Adobe PDFs, OpenDocument formats, Barcodes, OCR, Email formats and protocols in their apps. 
 
-## Why SDKs?
-Aspose.Total for Cloud is implemented as a REST API. If you use SDK, it hides the REST API calls and lets you use Aspose.Total features in a native way for your preferred language.
+This repository contains Examples and [SDKs](SDKs) for [Aspose.Total for Cloud](http://www.aspose.com/products/total/cloud) to help you learn and write your own applications.
 
 <p align="center">
-  <a title="Download complete Aspose.Total for Cloud source code" href="https://github.com/asposetotal/Aspose_Total_Cloud/archive/master.zip">
-	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
+
+  <a title="Download complete Aspose.Total for Cloud source code" href="https://github.com/aspose-total/Aspose.Total-for-Cloud/archive/master.zip">
+	<img src="http://i.imgur.com/hwNhrGZ.png" />
   </a>
 </p>
 
 Directory | Description
 --------- | -----------
-[Java Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Java)  |  Aspose.Storage Cloud SDK for Java.
-[PHP Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_PHP)  | Aspose.Storage Cloud SDK for PHP.
-[Python Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Python)  | Aspose.Storage Cloud SDK for Python.
-[Objective C Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C)  | Aspose.Storage Cloud SDK for Objective C.
-[Node.js Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_NodeJS)  | Aspose.Storage Cloud SDK for Node.js.
-[Ruby Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Ruby)  | Aspose.Storage Cloud SDK for Ruby.
-[Perl Storage SDK](SDKs/Aspose.Storage_Cloud_SDK_For_Perl)  | Aspose.Storage Cloud SDK for Perl.
+[SDKs](SDKs)  | A collection of Cloud SDKs that help you learn the API features
+
+## Resources
+
++ **Website:** [www.aspose.com](http://www.aspose.com)
++ **Product Home:** [Aspose.Total for Cloud](http://www.aspose.com/products/total/cloud)
++ **Download:** [Download Aspose.Total for Cloud](http://www.aspose.com/downloads/total/cloud)
++ **Documentation:** [Aspose.Total for Cloud Documentation](http://www.aspose.com/docs/display/totalnet/Home)
++ **Forum:** [Aspose.Total for Cloud Forum](http://www.aspose.com/community/forums/aspose.total-product-family/442/showforum.aspx)
++ **Blog:** [Aspose.Total for Cloud Blog](http://www.aspose.com/blogs/aspose-products/aspose-total-product-family.html)
