@@ -12,7 +12,7 @@ This repository contains Examples and [SDKs](SDKs) for [Aspose.Total for Cloud](
 
 Directory | Description
 --------- | -----------
-[SDKs](SDKs)  | A collection of Cloud SDKs that help you learn the API features
+[SDKs](SDKs)  | A collection of Cloud SDKs that help you learn and explore the API features
 
 ## Resources
 
