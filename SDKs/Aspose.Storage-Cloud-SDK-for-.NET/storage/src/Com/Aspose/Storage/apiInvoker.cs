@@ -1,6 +1,5 @@
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
 using System.IO;
 using System.Net;
@@ -189,11 +188,13 @@ namespace Com.Aspose.Storage
           {
               client.Headers.Add(headerParamsItem.Key, headerParamsItem.Value);
           }
-          foreach (var defaultHeaderMapItem in defaultHeaderMap.Where(defaultHeaderMapItem => !headerParams.ContainsKey(defaultHeaderMapItem.Key)))
+          foreach (var defaultHeaderMapItem in defaultHeaderMap)
           {
-              client.Headers.Add(defaultHeaderMapItem.Key, defaultHeaderMapItem.Value);
+              if (!headerParams.ContainsKey(defaultHeaderMapItem.Key))
+              {
+                  client.Headers.Add(defaultHeaderMapItem.Key, defaultHeaderMapItem.Value);
+              }
           }
-
           switch (method)
           {
               case "GET":
