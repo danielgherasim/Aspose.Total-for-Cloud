@@ -75,7 +75,7 @@ namespace Com.Aspose.Storage
         {
             try
             {
-                return new ResponseMessage(BinaryData);
+                return new ResponseMessage(BinaryData,200, "Ok");
             }
             catch (IOException e)
             {
@@ -132,7 +132,7 @@ namespace Com.Aspose.Storage
           return invokeAPIInternal(host, path, method, true, queryParams, body, headerParams, formParams) as byte[];
       }
 
-      public static void CopyTo(Stream source, Stream destination, int bufferSize = 81920)
+      public static void CopyTo(Stream source, Stream destination, int bufferSize)
       {
           byte[] array = new byte[bufferSize];
           int count;
@@ -233,7 +233,7 @@ namespace Com.Aspose.Storage
               {
                   using (var memoryStream = new MemoryStream())
                   {
-                      CopyTo(webResponse.GetResponseStream(), memoryStream);
+                      CopyTo(webResponse.GetResponseStream(), memoryStream,  81920);
                       return memoryStream.ToArray();
                   }
               }
