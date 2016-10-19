@@ -6,7 +6,7 @@
     <ProjectGuid>{A9E42704-6F02-4987-80EA-F5D97A6EAB14}</ProjectGuid>
     <OutputType>Library</OutputType>
     <NoStandardLibraries>false</NoStandardLibraries>
-    <AssemblyName>Aspose.Storage_Cloud</AssemblyName>
+    <AssemblyName>Aspose.Storage-Cloud</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
