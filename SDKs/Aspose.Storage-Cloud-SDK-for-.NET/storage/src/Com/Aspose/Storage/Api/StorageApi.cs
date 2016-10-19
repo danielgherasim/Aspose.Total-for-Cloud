@@ -8,8 +8,8 @@
       string basePath;
       private readonly ApiInvoker apiInvoker = ApiInvoker.GetInstance();
 
-      public StorageApi(String apiKey, String appSid, String basePath = "http://api.aspose.com/v1.1")
-      {
+      public StorageApi(String apiKey, String appSid, String basePath )
+      {       
 	    apiInvoker.addDefaultHeader(apiInvoker.API_KEY,apiKey);
         apiInvoker.addDefaultHeader(apiInvoker.APP_SID, appSid);
         this.basePath = basePath;
