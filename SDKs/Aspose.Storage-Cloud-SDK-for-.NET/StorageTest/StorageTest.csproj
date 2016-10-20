@@ -35,9 +35,6 @@
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:\Users\Imran Anwar\Downloads\Json70r1\Bin\Net40\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -61,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\storage\AsposeStorage.csproj">
-      <Project>{A9E42704-6F02-4987-80EA-F5D97A6EAB14}</Project>
+      <Project>{a9e42704-6f02-4987-80ea-f5d97a6eab14}</Project>
       <Name>AsposeStorage</Name>
     </ProjectReference>
   </ItemGroup>
