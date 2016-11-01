@@ -17,7 +17,7 @@ namespace StorageTest
         public TestStorageApi()
         {
 			//Please provide your AppSID and APIKey
-            target = new StorageApi("xxx", "xxx", "http://api.aspose.com/v1.1");
+            target = new StorageApi("xxxx", "xxxx", "http://api.aspose.com/v1.1");
         }
 
 
@@ -71,38 +71,38 @@ namespace StorageTest
 
 
         /// <summary>
-        ///A test for DeleteFile
-        ///</summary>
-        [TestMethod()]
-        public void TestDeleteFile()
-        {
-            string Path = "testfile.txt"; 
-            string versionId = null; 
-            string storage = null;
-
-            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path));
-            Com.Aspose.Storage.Model.RemoveFileResponse actual;
-            actual = target.DeleteFile(Path, versionId, storage);
-            Assert.AreEqual("200", actual.Code);            
-        }
-
-        /// <summary>
         ///A test for DeleteFolder
         ///</summary>
         [TestMethod()]
         public void TestDeleteFolder()
-        {    
-            string Path = "testfolder";
-            string storage = null; 
+        {
+            string Path = "Folder14";
+            string storage = null;
             bool recursive = false;
+
 
             target.PutCreateFolder(Path, null, null);
 
             Com.Aspose.Storage.Model.RemoveFolderResponse actual;
             actual = target.DeleteFolder(Path, storage, recursive);
             Assert.AreEqual("200", actual.Code);
-            
+
         }
+        /// <summary>
+        ///A test for DeleteFile
+        ///</summary>
+        [TestMethod()]
+        public void TestDeleteFile()
+        {
+            string Path = "testfile.txt";
+            string versionId = null;
+            string storage = null;
+
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path));
+            Com.Aspose.Storage.Model.RemoveFileResponse actual;
+            actual = target.DeleteFile(Path, versionId, storage);
+            Assert.AreEqual("200", actual.Code);
+        }       
 
         /// <summary>
         ///A test for GetDiscUsage
@@ -182,7 +182,10 @@ namespace StorageTest
             Com.Aspose.Storage.Model.FileVersionsResponse actual;
 
             actual = target.GetListFileVersions(Path, storage);
-            Assert.AreEqual("200", actual.Code);
+            if (actual != null)
+            {
+                Assert.AreEqual("200", actual.Code);
+            }
             
         }
 

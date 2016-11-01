@@ -758,10 +758,12 @@
       /// <param name="destStorage"></param>
       /// <returns></returns>
       public ResponseMessage PutCreateFolder (string Path, string storage, string destStorage) {
-        // create path and map variables
+
+
+          // create path and map variables
           var ResourcePath = "/storage/folder/{Path}/?appSid={appSid}&amp;storage={storage}&amp;destStorage={destStorage}".Replace("{format}", "json");
-        //    resourcePath = '/storage/folder/{path}/?appSid={appSid}&amp;storage={storage}&amp;destStorage={destStorage}'
-		ResourcePath = Regex.Replace(ResourcePath, "\\*", "").Replace("&amp;", "&").Replace("/?", "?").Replace("toFormat={toFormat}", "format={format}");
+          //    resourcePath = '/storage/folder/{path}/?appSid={appSid}&amp;storage={storage}&amp;destStorage={destStorage}'
+          ResourcePath = Regex.Replace(ResourcePath, "\\*", "").Replace("&amp;", "&").Replace("/?", "?").Replace("toFormat={toFormat}", "format={format}");
 
         // query params
         var queryParams = new Dictionary<String, String>();
@@ -788,10 +790,10 @@
 		  ResourcePath = ResourcePath.Replace("{" + "destStorage" + "}", apiInvoker.ToPathValue(destStorage)); 
 		}
         try {
-          if (typeof(ResponseMessage) == typeof(ResponseMessage)) {
-            var response = apiInvoker.invokeBinaryAPI(basePath, ResourcePath, "GET", queryParams, null, headerParams, formParams);
-            return (ResponseMessage) ApiInvoker.deserialize(response, typeof(ResponseMessage));
-          } else {
+          //if (typeof(ResponseMessage) != typeof(ResponseMessage)) {
+          //  var response = apiInvoker.invokeBinaryAPI(basePath, ResourcePath, "GET", queryParams, null, headerParams, formParams);
+          //  return (ResponseMessage) ApiInvoker.deserialize(response, typeof(ResponseMessage));
+          //} else {
             var response = apiInvoker.invokeAPI(basePath, ResourcePath, "PUT", queryParams, null, headerParams, formParams);
             if(response != null){
                return (ResponseMessage) ApiInvoker.deserialize(response, typeof(ResponseMessage));
@@ -799,7 +801,7 @@
             else {
               return null;
             }
-          }
+          //}
         } catch (ApiException ex) {
           if(ex.ErrorCode == 404) {
           	return null;

@@ -35,7 +35,10 @@ namespace Com.Aspose.Storage
 
         public void addDefaultHeader(string key, string value)
         {
-         defaultHeaderMap.Add(key, value);
+            if (!defaultHeaderMap.ContainsKey(key))
+            {
+                defaultHeaderMap.Add(key, value);
+            }
       }
 
         public string escapeString(string str)
