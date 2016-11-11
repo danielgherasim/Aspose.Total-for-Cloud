@@ -5,7 +5,7 @@ from setuptools import setup, find_packages
 setup(
     name = 'asposestoragecloud',
     packages = find_packages(),
-    version = '1.0.0',
+    version = '1.0.1',
     description = 'Aspose.Storage Cloud SDK for Python allows you to use Aspose.Storage API in your Python applications',
     author='Farooq Sheikh',
     author_email='farooq.sheikh@aspose.com',

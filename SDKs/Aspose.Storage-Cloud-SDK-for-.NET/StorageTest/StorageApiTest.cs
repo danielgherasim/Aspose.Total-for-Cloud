@@ -17,7 +17,7 @@ namespace StorageTest
         public TestStorageApi()
         {
 			//Please provide your AppSID and APIKey
-            target = new StorageApi("xxxx", "xxxx", "http://api.aspose.com/v1.1");
+            target = new StorageApi("xxxx", "xxxx", "http://api.aspose.cloud/v1.1");
         }
 
 

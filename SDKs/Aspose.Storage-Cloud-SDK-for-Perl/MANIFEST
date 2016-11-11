@@ -41,3 +41,6 @@ t/data/SampleExecuteTemplate.doc
 t/data/SampleExecuteTemplateData.txt
 t/data/SampleWordDocument.docx
 t/data/testfile.txt
+Makefile.PL
+META.yml
+META.json

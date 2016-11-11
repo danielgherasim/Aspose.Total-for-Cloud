@@ -13,7 +13,7 @@ namespace AsposeStorage
             try
             {
                 System.Diagnostics.Debug.WriteLine("\n\nFetching the results...");
-                StorageApi storageApi = new StorageApi("xxx", "xxx", "http://api.aspose.com/v1.1");
+                StorageApi storageApi = new StorageApi("xxx", "xxx", "http://api.aspose.cloud/v1.1");
 
                 string fileName = "BarcodeCloud-Format-Support.png";
 

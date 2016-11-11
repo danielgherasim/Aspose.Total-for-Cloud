@@ -29,7 +29,7 @@ public class StorageUnitTest {
 
     public StorageUnitTest(){
 
-        BASE_URL = "http://api.aspose.com/v1.1";
+        BASE_URL = "http://api.aspose.cloud/v1.1";
         APP_SID = "****";
         APP_KEY = "****";
 
