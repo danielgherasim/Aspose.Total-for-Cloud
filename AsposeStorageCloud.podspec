@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "AsposeStorageCloud"
-  s.version      = "0.0.2"
+  s.version      = "1.0.0"
   s.summary      = "A powerful API for iOS apps that work with files."
   s.description  = <<-DESC
                    This SDK allows you to perform storage operations like download a specific file, upload a specific file, remove a specific file, move a specific file, get the file listing of a specific folder etc. on Aspose Cloud Storage. 
@@ -9,9 +9,9 @@ Pod::Spec.new do |s|
   s.homepage     = "http://www.aspose.com"
   s.license = { :type => 'MIT', :file => 'LICENSE'}
   s.author = { "Muhammad Sohail Ismail" => "muhammad.sohail@aspose.com" }
-  s.social_media_url = "https://www.facebook.com/asposeplugins/"
+  s.social_media_url = "https://www.facebook.com/aspose/"
   s.platform = :ios, "7.0"
-  s.source       = { :git => "https://github.com/asposetotal/Aspose_Total_Cloud.git", :tag => "0.0.2" }
+  s.source       = { :git => "https://github.com/aspose-total/Aspose.Total-for-Cloud.git", :tag => "Aspose.Storage_Cloud_SDK_For_iOS_v1_0_0" }
   
   s.subspec 'model' do |ss|
       ss.source_files = 'SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C/Aspose.Storage_Cloud_SDK_For_Objective_C/storage/model/*.{h,m}'
