@@ -14,15 +14,15 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/aspose-total/Aspose.Total-for-Cloud.git", :tag => "Aspose.Storage_Cloud_SDK_For_iOS_v1_0_0" }
   
   s.subspec 'model' do |ss|
-      ss.source_files = 'SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C/Aspose.Storage_Cloud_SDK_For_Objective_C/storage/model/*.{h,m}'
+      ss.source_files = 'SDKs/Aspose.Storage-Cloud-SDK-for-Objective-C/Aspose.Storage_Cloud_SDK_For_Objective_C/storage/model/*.{h,m}'
   end
   s.subspec 'client' do |ss|
       ss.dependency 'AsposeStorageCloud/model'
-      ss.source_files = 'SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C/Aspose.Storage_Cloud_SDK_For_Objective_C/storage/client/*.{h,m}'
+      ss.source_files = 'SDKs/Aspose.Storage-Cloud-SDK-for-Objective-C/Aspose.Storage_Cloud_SDK_For_Objective_C/storage/client/*.{h,m}'
   end
   s.subspec 'api' do |ss|
       ss.dependency 'AsposeStorageCloud/client'
-      ss.source_files = 'SDKs/Aspose.Storage_Cloud_SDK_For_Objective_C/Aspose.Storage_Cloud_SDK_For_Objective_C/storage/api/*.{h,m}'
+      ss.source_files = 'SDKs/Aspose.Storage-Cloud-SDK-for-Objective-C/Aspose.Storage_Cloud_SDK_For_Objective_C/storage/api/*.{h,m}'
   end
   
   s.dependency "AFNetworking", "~> 2.0"
