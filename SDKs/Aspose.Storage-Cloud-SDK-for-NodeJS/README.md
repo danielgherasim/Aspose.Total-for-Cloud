@@ -1,9 +1,8 @@
-# Aspose.Storage Cloud SDK for NodeJS
+## Aspose.Storage Cloud SDK for NodeJS
 
-This repository contains Aspose.Storage Cloud SDK for NodeJS source code. This SDK allows you to work with Aspose.Storage Cloud REST APIs in your NodeJS applications quickly and easily. 
+
 
 ## How to use the SDK?
-
 The complete source code is available in this repository folder. For more details, please visit our [documentation website](http://www.aspose.com/docs/display/totalcloud/How+to+Setup+Aspose.Storage+Cloud+SDK+for+Node.js).
 
 ## Quick SDK Tutorial
@@ -25,3 +24,6 @@ storageApi.GetDiscUsage('', function(responseMessage) {
 	console.log('DiscUsage:', responseMessage.body.DiscUsage.UsedSize);	
 });
 ```
+
+##Contact Us
+Your feedback is very important to us. Please feel free to contact us using our [Support Forums](https://www.aspose.com/community/forums/).

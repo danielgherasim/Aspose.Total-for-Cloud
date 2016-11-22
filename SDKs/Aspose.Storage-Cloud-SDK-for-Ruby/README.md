@@ -1,10 +1,8 @@
 # Aspose.Storage Cloud SDK For Ruby
 This SDK lets you use [Aspose Cloud Storage APIs](http://api.aspose.com/v1.1/swagger/ui/index) in your web apps.
 
-## Installing
-You can simply install AsposeStorageCloud with gem:
-
-`gem install aspose_storage_cloud`
+##How to Use the SDK?
+The complete source code is available in this repository folder, you can either directly use it in your project or use Maven. For more details, please visit our [documentation website](http://www.aspose.com/docs/display/totalcloud/Available+SDKs).
 
 ## Usage
 APIs of this SDK can be called as follows:
@@ -33,8 +31,5 @@ end
 ## Unit Tests
 Aspose Storage SDK includes a suite of unit tests within the [test](https://github.com/asposetotal/Aspose_Total_Cloud/blob/master/SDKs/Aspose.Storage_Cloud_SDK_For_Ruby/test/storage_tests.rb) subdirectory. These Unit Tests also serves as examples of how to use the Aspose Storage SDK.
 
-## Contact
-Your feedback is very important to us. Please email us all your queries and feedback at marketplace@aspose.com.
-
-## License
-Aspose Storage SDK is available under the MIT license. See the [LICENSE](https://github.com/asposetotal/Aspose_Total_Cloud/blob/master/SDKs/Aspose.Storage_Cloud_SDK_For_Ruby/LICENSE) file for more info.
+##Contact Us
+Your feedback is very important to us. Please feel free to contact us using our [Support Forums](https://www.aspose.com/community/forums/).
