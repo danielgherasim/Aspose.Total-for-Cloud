@@ -26,7 +26,7 @@
     self = [super init];
     if (self) {
         self.apiClient = nil;
-        self.host = @"http://api.aspose.com/v1.1";
+        self.host = @"http://api.aspose.cloud/v1.1";
         self.username = @"";
         self.password = @"";
         self.tempFolderPath = nil;
