@@ -1,8 +1,14 @@
 # Aspose.Storage Cloud SDK For Ruby
 This SDK lets you use [Aspose Cloud Storage APIs](http://api.aspose.com/v1.1/swagger/ui/index) in your web apps.
 
+<p align="center">
+  <a title="Download complete Aspose.Storage for Cloud source code" href="https://github.com/asposetotal/Aspose_total_Cloud/archive/master.zip">
+	<img src="https://raw.github.com/AsposeExamples/java-examples-dashboard/master/images/downloadZip-Button-Large.png" />
+  </a>
+</p>
+
 ##How to Use the SDK?
-The complete source code is available in this repository folder, you can either directly use it in your project or use Maven. For more details, please visit our [documentation website](http://www.aspose.com/docs/display/totalcloud/Available+SDKs).
+The complete source code is available in this repository folder, you can either directly use it in your project or use RubyGems. For more details, please visit our [documentation website](http://www.aspose.com/docs/display/totalcloud/Available+SDKs).
 
 ## Usage
 APIs of this SDK can be called as follows:
