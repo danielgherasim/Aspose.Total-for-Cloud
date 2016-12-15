@@ -3,7 +3,7 @@
 namespace Aspose\Storage;
 
 use Aspose\Storage\ApiException as Exception;
-use Aspose\Storage\ApiClient;
+use Aspose\Storage\APIClient;
 
 class StorageApi {
 
