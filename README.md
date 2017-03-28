@@ -1,4 +1,4 @@
-##Aspose.Total for Cloud
+## Aspose.Total for Cloud
 [Aspose.Total for Cloud](http://www.aspose.com/products/total/cloud) is a REST based document generation, conversion and automation platform for developers in the cloud. It makes it easier for Web and Mobile Apps developers to work with Microsoft Word documents, Excel spreadsheets, PowerPoint presentations, Adobe PDFs, OpenDocument formats, Barcodes, OCR, Email formats and protocols in their apps. 
 
 This repository contains Examples and [SDKs](SDKs) for [Aspose.Total for Cloud](http://www.aspose.com/products/total/cloud) to help you learn and write your own applications.
