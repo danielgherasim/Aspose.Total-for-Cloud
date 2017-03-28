@@ -5,7 +5,7 @@ var assert = require('assert');
 var AppSID = 'XXX';
 var AppKey = 'XXX';
 var config = {'appSid':AppSID,'apiKey':AppKey , 'debug' : true};
-var data_path = './data/';
+var data_path = '../../../Data/';
 
 var storageApi = new StorageApi(config);
  

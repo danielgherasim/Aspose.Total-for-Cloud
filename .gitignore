@@ -18,6 +18,7 @@ Out/
 Out*/
 Data/*Out*
 TestResults/
+node_modules/
 *.vsmdi
 test-results/
 *.userprefs

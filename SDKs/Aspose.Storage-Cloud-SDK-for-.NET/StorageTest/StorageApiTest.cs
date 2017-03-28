@@ -71,6 +71,21 @@ namespace StorageTest
 
 
         /// <summary>
+        ///A test for DeleteFile
+        ///</summary>
+        [TestMethod()]
+        public void TestDeleteFile()
+        {
+            string Path = "testfile.txt";
+            string versionId = null;
+            string storage = null;
+
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + Path));
+            Com.Aspose.Storage.Model.RemoveFileResponse actual;
+            actual = target.DeleteFile(Path, versionId, storage);
+            Assert.AreEqual("200", actual.Code);
+        }       
+        /// <summary>
         ///A test for DeleteFolder
         ///</summary>
         [TestMethod()]
@@ -87,21 +102,6 @@ namespace StorageTest
             actual = target.DeleteFolder(Path, storage, recursive);
             Assert.AreEqual("200", actual.Code);
 
-        }
-        /// <summary>
-        ///A test for DeleteFile
-        ///</summary>
-        [TestMethod()]
-        public void TestDeleteFile()
-        {
-            string Path = "testfile.txt";
-            string versionId = null;
-            string storage = null;
-
-            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path));
-            Com.Aspose.Storage.Model.RemoveFileResponse actual;
-            actual = target.DeleteFile(Path, versionId, storage);
-            Assert.AreEqual("200", actual.Code);
         }       
 
         /// <summary>
@@ -129,7 +129,7 @@ namespace StorageTest
             string versionId = null; 
             string storage = null;
 
-            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path));            
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + Path));            
             Com.Aspose.Storage.Model.ResponseMessage actual;
             actual = target.GetDownload(Path, versionId, storage);
 
@@ -147,7 +147,7 @@ namespace StorageTest
             string versionId = null; 
             string storage = null;
 
-            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path)); 
+            target.PutCreate(Path, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + Path)); 
             Com.Aspose.Storage.Model.FileExistResponse actual;
             actual = target.GetIsExist(Path, versionId, storage);
             Assert.AreEqual("200", actual.Code);
@@ -216,7 +216,7 @@ namespace StorageTest
             string storage = null; 
             string destStorage = null;
 
-            target.PutCreate(name, null, null, System.IO.File.ReadAllBytes("\\temp\\resources\\" + name)); 
+            target.PutCreate(name, null, null, System.IO.File.ReadAllBytes(Common.GetDataDir() + name)); 
             Com.Aspose.Storage.Model.MoveFileResponse actual;
             actual = target.PostMoveFile(name, dest, versionId, storage, destStorage);
             Assert.AreEqual("200", actual.Code);
@@ -253,7 +253,7 @@ namespace StorageTest
             string versionId = null; 
             string storage = null; 
             string destStorage = null;
-            byte[] file = System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path);
+            byte[] file = System.IO.File.ReadAllBytes(Common.GetDataDir() + Path);
 
             target.PutCreate(Path, null, null, file); 
             Com.Aspose.Storage.Model.ResponseMessage actual;
@@ -290,7 +290,7 @@ namespace StorageTest
             string Path = "testfile.txt"; 
             string versionId = null; 
             string storage = null;
-            byte[] file = System.IO.File.ReadAllBytes("\\temp\\resources\\" + Path); 
+            byte[] file = System.IO.File.ReadAllBytes(Common.GetDataDir() + Path); 
 
             
             Com.Aspose.Storage.Model.ResponseMessage actual;
