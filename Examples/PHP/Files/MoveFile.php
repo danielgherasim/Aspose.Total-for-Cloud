@@ -16,7 +16,7 @@ class Files {
 		$this->storageApi = new StorageApi();
 	}
 
-	public function checkFilePresence() {
+	public function moveFile() {
 		// Upload file to Aspose Cloud Storage
 		$fileName = "testfile.txt";
 		Utils::uploadFile($fileName);
@@ -27,7 +27,7 @@ class Files {
 }
 
 $files = new Files();
-$files->checkFilePresence();
+$files->moveFile();
 
 ?>
 //ExEnd:
