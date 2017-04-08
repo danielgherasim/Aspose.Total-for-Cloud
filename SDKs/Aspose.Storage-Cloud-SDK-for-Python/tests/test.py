@@ -31,8 +31,8 @@ class TestAsposeStorage(unittest.TestCase):
         
         try:
             response = self.storageApi.PutCreateFolder('list_test_folder')
-            response = self.storageApi.PutCreate('list_test_folder/SampleWordDocument.docx','./data/SampleWordDocument.docx')
-            response = self.storageApi.PutCreate('list_test_folder/testfile.txt','./data/testfile.txt')
+            response = self.storageApi.PutCreate('list_test_folder/SampleWordDocument.docx','../../../Data/SampleWordDocument.docx')
+            response = self.storageApi.PutCreate('list_test_folder/testfile.txt','../../../Data/testfile.txt')
             response = self.storageApi.PutCreateFolder('list_test_folder/sub_folder')
             response = self.storageApi.GetListFiles(Path='list_test_folder')
             self.assertEqual(len(response.Files),3)
@@ -57,7 +57,7 @@ class TestAsposeStorage(unittest.TestCase):
 
     def testPutCreate(self):
         try:
-            response = self.storageApi.PutCreate('SampleWordDocument.docx','./data/SampleWordDocument.docx')
+            response = self.storageApi.PutCreate('SampleWordDocument.docx','../../../Data/SampleWordDocument.docx')
 
             self.assertIsInstance(response,ResponseMessage.ResponseMessage)
             self.assertEqual(response.Status,'OK')
@@ -112,7 +112,7 @@ class TestAsposeStorage(unittest.TestCase):
 
     def testPostMoveFile(self):
         try:
-            response = self.storageApi.PutCreate('testfile.txt','./data/testfile.txt')
+            response = self.storageApi.PutCreate('testfile.txt','../../../Data/testfile.txt')
             response = self.storageApi.PostMoveFile('testfile.txt','mytestfolder/testfile.txt')
 
             self.assertIsInstance(response,MoveFileResponse.MoveFileResponse)
@@ -139,8 +139,8 @@ class TestAsposeStorage(unittest.TestCase):
 
     def testPutCopy(self):
         try:
-            response = self.storageApi.PutCreate('testfile.txt','./data/testfile.txt')
-            response = self.storageApi.PutCopy('testfile.txt','new_testfile.txt','./data/testfile.txt')
+            response = self.storageApi.PutCreate('testfile.txt','../../../Data/testfile.txt')
+            response = self.storageApi.PutCopy('testfile.txt','new_testfile.txt','../../../Data/testfile.txt')
 
             self.assertIsInstance(response,ResponseMessage.ResponseMessage)
             self.assertEqual(response.Status,'OK')
@@ -175,7 +175,7 @@ class TestAsposeStorage(unittest.TestCase):
 
     def testGetListFileVersions(self):
         try:
-            response = self.storageApi.PutCreate('testfile.txt','./data/testfile.txt')
+            response = self.storageApi.PutCreate('testfile.txt','../../../Data/testfile.txt')
             response = self.storageApi.GetListFileVersions('testfile.txt')
 
             self.assertIsInstance(response,FileVersionsResponse.FileVersionsResponse)
