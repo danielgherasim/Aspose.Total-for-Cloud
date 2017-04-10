@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         private Exception exception;
 
         protected Integer doInBackground(Void... urls) {
-            CheckPresenceOfFileExample.execute(MainActivity.this);
+            UploadFileToAsposeCloudStorageExample.execute(MainActivity.this);
             return 1;
         }
 

@@ -469,7 +469,7 @@ try {
 	  resourcePath = resourcePath.replace("{" + "storage" + "}" , apiInvoker.toPathValue(storage));
 	  else
 	  resourcePath = resourcePath.replaceAll("[&?]storage.*?(?=&|\\?|$)", "");
-    String[] contentTypes = {
+    String[] contentTypes = {"application/octet-stream",
       "multipart/form-data"};
 
     String contentType = contentTypes.length > 0 ? contentTypes[0] : "application/json";
@@ -480,7 +480,7 @@ if(contentType.startsWith("multipart/form-data")) {
         postBody = mp;
     }
 try {
-		response = apiInvoker.invokeAPI(basePath, resourcePath, "PUT", queryParams, postBody, headerParams, formParams, contentType);
+        response=apiInvoker.invokeAPI(basePath, resourcePath, "PUT", queryParams, postBody, headerParams, formParams, contentType);
 		return (ResponseMessage) ApiInvoker.deserialize(response, "", ResponseMessage.class);
     } catch (ApiException ex) {
       if(ex.getCode() == 404) {

@@ -20,12 +20,13 @@ public class UploadFileToAsposeCloudStorageExample {
             File f=stream2file("testfile","txt",context.getResources().openRawResource(R.raw.testfile));
             StorageApi storageApi = new StorageApi(Configuration.apiKey, Configuration.appSID, true);
             // Upload source file to aspose cloud storage
-            storageApi.PutCreate("testfile.txt", "", "",f);
-            System.out.println("file created");
+            
+            storageApi.PutCreate("myfile.txt", "", "",f);
 
         }
         catch (Exception ex)
         {
+            System.out.println("exception");
             ex.printStackTrace();
         }
         //ExEnd: 1

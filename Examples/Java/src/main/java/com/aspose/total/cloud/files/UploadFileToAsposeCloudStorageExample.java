@@ -11,11 +11,12 @@ public class UploadFileToAsposeCloudStorageExample {
     public static void main(String[] args) {
       //ExStart: 1
         Path inputFile = Utils.getPath(UploadFileToAsposeCloudStorageExample.class, "testfile.txt");
+        System.out.println(inputFile.toFile().getAbsolutePath());
         try
         {
             StorageApi storageApi = new StorageApi(Configuration.apiKey, Configuration.appSID, true);
             // Upload source file to aspose cloud storage
-            storageApi.PutCreate("testfile.txt", "", "mystoragename",inputFile.toFile());
+            storageApi.PutCreate("testfile.txt", "", "",inputFile.toFile());
 
         }
         catch (Exception ex)
