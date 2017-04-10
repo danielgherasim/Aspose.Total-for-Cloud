@@ -1,6 +1,7 @@
 <?php
 
 use Aspose\Storage\StorageApi;
+use Aspose\Storage\AsposeApp;
 
 class StorageApiTest extends PHPUnit_Framework_TestCase {
     
@@ -8,6 +9,8 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
 
     protected function setUp()
     {        
+        AsposeApp::$appSID = "B01A15E5-1B83-4B9A-8EB3-0F2BFA6AC766";
+        AsposeApp::$apiKey = "da77c9f5da014d91faf2961ecec2de66";
         $this->storage = new StorageApi();
     }  
    
@@ -32,10 +35,10 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
     public function testGetDownload()
     {
         $result = $this->storage->GetDownload($Path="info.txt", $versionId = null, $storage = null);
-        $fh = fopen(getcwd(). '/Data/Output/info.txt', 'w');
+        $fh = fopen(realpath(__DIR__ . '/../../../../..'). '/Data/Output/info.txt', 'w');
         fwrite($fh, $result);
         fclose($fh);
-        $this->assertFileExists(getcwd(). '/Data/Output/info.txt');
+        $this->assertFileExists(realpath(__DIR__ . '/../../../../..'). '/Data/Output/info.txt');
     }
     
     public function testGetIsExist()
@@ -76,7 +79,7 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
     
     public function testPutCopy()
     {
-        $file = getcwd(). '/Data/Input/info.txt';
+        $file = realpath(__DIR__ . '/../../../../..'). '/Data/Input/info.txt';
         $result = $this->storage->PutCopy($Path="info.txt", $newdest="copy-info.txt", $versionId = null, $storage = null, $destStorage = null, $file);
         $this->assertEquals(200, $result->Code);
     }
@@ -89,7 +92,7 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
     
     public function testPutCreate()
     {
-        $file = getcwd(). '/Data/Input/info.txt';
+        $file = realpath(__DIR__ . '/../../../../..'). '/Data/Input/info.txt';
         $result = $this->storage->PutCreate($Path="info.txt", $versionId = null, $storage = null, $file);
         $this->assertEquals(200, $result->Code);
     }
