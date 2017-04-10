@@ -75,8 +75,8 @@
     //ExStart:DeleteFileFromThirdPartyStorage
     
     // Upload file to Aspose Cloud Storage
-    NSString *fileName = @"testfile.txt";
-    [Utils uploadFile:fileName];
+    NSString *fileName = @"SampleWordDocument.pdf";
+    //[Utils uploadFile:fileName];
     
     [self.storageApi deleteFileWithCompletionBlock:fileName
                                          versionId:nil
@@ -91,12 +91,12 @@
     //ExStart:DownloadFile
     
     // Upload file to Aspose Cloud Storage
-    NSString *fileName = @"testfile.txt";
-    [Utils uploadFile:fileName];
+    NSString *fileName = @"barcode.png";
+    //[Utils uploadFile:fileName];
     
     [self.storageApi getDownloadWithCompletionBlock:fileName
                                           versionId:nil
-                                            storage:nil
+                                            storage:@"MyDropboxStorage"
                                   completionHandler:^(NSURL *output, NSError *error) {
         NSLog(@"%@", output);
     }];
@@ -149,8 +149,8 @@
 - (void)uploadFile {
     //ExStart:UploadFile
     
-    NSURL *pathToFile = [[NSBundle mainBundle] URLForResource:@"testfile" withExtension:@"txt"];
-    [self.storageApi putCreateWithCompletionBlock:@"testfile.txt"
+    NSURL *pathToFile = [[NSBundle mainBundle] URLForResource:@"barcode" withExtension:@"png"];
+    [self.storageApi putCreateWithCompletionBlock:@"barcode.png"
                                              file:pathToFile
                                         versionId:nil
                                           storage:nil
@@ -163,8 +163,8 @@
 - (void)uploadFileToThirdPartyStorage {
     //ExStart:UploadFileToThirdPartyStorage
     
-    NSURL *pathToFile = [[NSBundle mainBundle] URLForResource:@"testfile" withExtension:@"txt"];
-    [self.storageApi putCreateWithCompletionBlock:@"testfile.txt"
+    NSURL *pathToFile = [[NSBundle mainBundle] URLForResource:@"barcode" withExtension:@"png"];
+    [self.storageApi putCreateWithCompletionBlock:@"barcode.png"
                                              file:pathToFile
                                         versionId:nil
                                           storage:@"MyDropboxStorage"
