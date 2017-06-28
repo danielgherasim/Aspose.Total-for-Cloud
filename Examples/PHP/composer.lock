@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "1777af6de03cb2bd0ef6acb96f205d80",
+    "packages": [
+        {
+            "name": "aspose/storage-sdk-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aspose-total/Aspose-Cloud-Storage-SDK-For-PHP.git",
+                "reference": "7510ff573a9469931b80e5174fad8e13870686b0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aspose-total/Aspose-Cloud-Storage-SDK-For-PHP/zipball/7510ff573a9469931b80e5174fad8e13870686b0",
+                "reference": "7510ff573a9469931b80e5174fad8e13870686b0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "php": ">=5.3.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Aspose": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "Imran Anwar",
+                    "email": "imran.anwar@aspose.com"
+                }
+            ],
+            "description": "Aspose.Storage Cloud SDK for PHP lets users use Aspose Cloud Storage APIs in their PHP apps.",
+            "homepage": "https://github.com/asposetotal/Aspose_Storage_Cloud_SDK_For_PHP",
+            "keywords": [
+                "aspose",
+                "aspose cloud",
+                "php",
+                "storage"
+            ],
+            "time": "2016-06-15 10:59:06"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "aspose/storage-sdk-php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

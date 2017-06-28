@@ -23,27 +23,27 @@
     
     [Utils setAppKeyAndAppSID];
     
-    //DiskUsage *diskUsage = [[DiskUsage alloc] init];
-    //[diskUsage getDiscUsage];
-    //[diskUsage getDiskUsageFromThirdPartyStorage];
+    DiskUsage *diskUsage = [[DiskUsage alloc] init];
+    [diskUsage getDiscUsage];
+    [diskUsage getDiskUsageFromThirdPartyStorage];
     
     Files *files = [[Files alloc] init];
-    //[files checkFilePresence];
-    //[files copyFile];
-    //[files deleteFile];
-    //[files deleteFileFromThirdPartyStorage];
-    //[files downloadFile];
-    //[files getListFiles];
-    //[files getListFilesFromThirdPartyStorage];
-    //[files moveFile];
+    [files checkFilePresence];
+    [files copyFile];
+    [files deleteFile];
+    [files deleteFileFromThirdPartyStorage];
+    [files downloadFile];
+    [files getListFiles];
+    [files getListFilesFromThirdPartyStorage];
+    [files moveFile];
     [files uploadFile];
-    //[files uploadFileToThirdPartyStorage];
+    [files uploadFileToThirdPartyStorage];
     
-    /*Folder *folder = [[Folder alloc] init];
+    Folder *folder = [[Folder alloc] init];
     [folder createFolder];
     [folder createFolderOnThirdPartyStorage];
     [folder deleteFolder];
-    [folder deleteFolderFromThirdPartyStorage];*/
+    [folder deleteFolderFromThirdPartyStorage];
     
     return YES;
 }
