@@ -18,12 +18,9 @@
 		30D6AB5D1E92419000310043 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D6AB5B1E92419000310043 /* Main.storyboard */; };
 		30D6AB5F1E92419000310043 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30D6AB5E1E92419000310043 /* Assets.xcassets */; };
 		30D6AB621E92419000310043 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30D6AB601E92419000310043 /* LaunchScreen.storyboard */; };
-		6FF8F411BFA5202FC02B0E29 /* libPods-Aspose.Storage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5481F27CEF1E9B7D693DE183 /* libPods-Aspose.Storage.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C8033EB34209F0212068612 /* Pods-Aspose.Storage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage.release.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage/Pods-Aspose.Storage.release.xcconfig"; sourceTree = "<group>"; };
-		2F41D80D926DE9E6898FAF9D /* Pods-Aspose.Storage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Aspose.Storage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Aspose.Storage/Pods-Aspose.Storage.debug.xcconfig"; sourceTree = "<group>"; };
 		306F358C1E92454200DB6BEA /* DiskUsage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DiskUsage.h; path = DiskUsage/DiskUsage.h; sourceTree = "<group>"; };
 		306F358D1E92454200DB6BEA /* DiskUsage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DiskUsage.m; path = DiskUsage/DiskUsage.m; sourceTree = "<group>"; };
 		306F358F1E9245EE00DB6BEA /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
@@ -42,7 +39,6 @@
 		30D6AB5E1E92419000310043 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30D6AB611E92419000310043 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		30D6AB631E92419000310043 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		5481F27CEF1E9B7D693DE183 /* libPods-Aspose.Storage.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Aspose.Storage.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,7 +46,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FF8F411BFA5202FC02B0E29 /* libPods-Aspose.Storage.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,8 +93,6 @@
 			children = (
 				30D6AB511E92419000310043 /* Aspose.Storage */,
 				30D6AB501E92419000310043 /* Products */,
-				EADEB06CCFA03132D5319E2B /* Pods */,
-				9314D84EF48427996C38EAA6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -139,23 +132,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		9314D84EF48427996C38EAA6 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				5481F27CEF1E9B7D693DE183 /* libPods-Aspose.Storage.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EADEB06CCFA03132D5319E2B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2F41D80D926DE9E6898FAF9D /* Pods-Aspose.Storage.debug.xcconfig */,
-				1C8033EB34209F0212068612 /* Pods-Aspose.Storage.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -163,12 +139,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 30D6AB661E92419000310043 /* Build configuration list for PBXNativeTarget "Aspose.Storage" */;
 			buildPhases = (
-				E4B812578133E3CBFCDE5074 /* [CP] Check Pods Manifest.lock */,
 				30D6AB4B1E92419000310043 /* Sources */,
 				30D6AB4C1E92419000310043 /* Frameworks */,
 				30D6AB4D1E92419000310043 /* Resources */,
-				21DD0BB857517403879225DE /* [CP] Embed Pods Frameworks */,
-				62EE9D001E98AC559C88B45E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -226,54 +199,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		21DD0BB857517403879225DE /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aspose.Storage/Pods-Aspose.Storage-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62EE9D001E98AC559C88B45E /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Aspose.Storage/Pods-Aspose.Storage-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E4B812578133E3CBFCDE5074 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		30D6AB4B1E92419000310043 /* Sources */ = {
@@ -401,7 +326,6 @@
 		};
 		30D6AB671E92419000310043 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2F41D80D926DE9E6898FAF9D /* Pods-Aspose.Storage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Aspose.Storage/Info.plist;
@@ -413,7 +337,6 @@
 		};
 		30D6AB681E92419000310043 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1C8033EB34209F0212068612 /* Pods-Aspose.Storage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Aspose.Storage/Info.plist;

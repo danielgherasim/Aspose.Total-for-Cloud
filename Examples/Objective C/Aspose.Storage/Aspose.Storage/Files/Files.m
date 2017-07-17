@@ -75,7 +75,7 @@
     //ExStart:DeleteFileFromThirdPartyStorage
     
     // Upload file to Aspose Cloud Storage
-    NSString *fileName = @"SampleWordDocument.pdf";
+    NSString *fileName = @"barcode.png";
     //[Utils uploadFile:fileName];
     
     [self.storageApi deleteFileWithCompletionBlock:fileName
@@ -91,12 +91,12 @@
     //ExStart:DownloadFile
     
     // Upload file to Aspose Cloud Storage
-    NSString *fileName = @"barcode.png";
+    NSString *fileName = @"Book1.xlsx"; //@"muhammad.sohail@aspose.com";
     //[Utils uploadFile:fileName];
     
     [self.storageApi getDownloadWithCompletionBlock:fileName
                                           versionId:nil
-                                            storage:@"MyDropboxStorage"
+                                            storage:nil
                                   completionHandler:^(NSURL *output, NSError *error) {
         NSLog(@"%@", output);
     }];

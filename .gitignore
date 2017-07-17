@@ -27,6 +27,7 @@ Plugins/Aspose_Words_NET_for_PHP/.idea/*
 Plugins/Aspose_Words_NET_for_PHP/vendor/*
 Plugins/Aspose_Words_NET_for_PHP/composer.lock
 *.gitattributes
+<<<<<<< HEAD
 *.pyc
 # Built application files
 *.apk
@@ -103,6 +104,10 @@ freeline_project_description.json
 *.zip
 *.tar.gz
 *.rar
+=======
+.DS_Store
+*.xcuserstate
+>>>>>>> 5e4053bdf27f206727e174b47e0274408f5c1095
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*

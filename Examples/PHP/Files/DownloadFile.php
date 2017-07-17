@@ -18,11 +18,11 @@ class Files {
 
 	public function downloadFile() {
 		// Upload file to Aspose Cloud Storage
-		$fileName = "testfile.txt";
-		Utils::uploadFile($fileName);
+		$fileName = "AutoFilter.xlsx";
+		//Utils::uploadFile($fileName);
 
 		$result = $this->storageApi->GetDownload($Path=$fileName, $versionId = null, $storage = null);
-        $fh = fopen(realpath(__DIR__ . '/../../..'). '/Data/Output/testfile.txt', 'w');
+        $fh = fopen(realpath(__DIR__ . '/../../..'). '/Data/Output/test_cells.xlsx', 'w');
         fwrite($fh, $result);
         fclose($fh);
 	}

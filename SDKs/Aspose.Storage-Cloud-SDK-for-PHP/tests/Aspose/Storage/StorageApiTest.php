@@ -14,7 +14,7 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
         $this->storage = new StorageApi();
     }  
    
-    public function testDeleteFile()
+    /*public function testDeleteFile()
     {
         $result = $this->storage->DeleteFile($Path="info.txt", $versionId = null, $storage = null);        
         $this->assertEquals(200, $result->Code);
@@ -88,19 +88,19 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
     {
         $result = $this->storage->PutCopyFolder($Path="testing", $newdest="copy-testing", $versionId = null, $storage = null, $destStorage = null);
         $this->assertEquals(200, $result->Code);
-    }
+    }*/
     
     public function testPutCreate()
     {
-        $file = realpath(__DIR__ . '/../../../../..'). '/Data/Input/info.txt';
-        $result = $this->storage->PutCreate($Path="info.txt", $versionId = null, $storage = null, $file);
+        $file = realpath(__DIR__ . '/../../../../..'). '/Data/SampleWordDocument.docx';
+        $result = $this->storage->PutCreate($Path="SampleWordDocument.docx", $versionId = null, $storage = null, $file);
         $this->assertEquals(200, $result->Code);
     }
     
-    public function testPutCreateFolder()
+    /*public function testPutCreateFolder()
     {
         $result = $this->storage->PutCreateFolder($Path="Testing123", $storage = null, $destStorage = null);
         $this->assertEquals(200, $result->Code);
-    }
+    }*/
                          
 }    

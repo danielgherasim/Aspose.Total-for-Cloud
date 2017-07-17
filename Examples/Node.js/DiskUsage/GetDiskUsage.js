@@ -16,7 +16,7 @@ var storageApi = new StorageApi(config);
 try {	
 	storageApi.GetDiscUsage('', function(responseMessage) {
 		
-                   console.log('status:', responseMessage.status);
+                   console.log('status:', responseMessage);
 	});
 
 }catch (e) {
