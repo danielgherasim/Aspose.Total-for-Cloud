@@ -9,14 +9,14 @@ namespace Files
         public static void Run()
         {
             // ExStart:1           
-            StorageApi storageApi = new StorageApi(Common.APP_KEY, Common.APP_SID, Common.BASEPATH);
+           StorageApi storageApi = new StorageApi(Common.APP_KEY, Common.APP_SID, Common.BASEPATH);
 
-            string Path = "testfile.txt";
+           string Path = "testfile.txt";
             string versionId = null;
             string storage = null;            
             byte[] file = System.IO.File.ReadAllBytes(Common.GetDataDir() + Path);
             try
-            {
+            {               
                 // Invoke Aspose.Storage Cloud SDK API to upload file
                 storageApi.PutCreate(Path, versionId, storage, file); 
             }
