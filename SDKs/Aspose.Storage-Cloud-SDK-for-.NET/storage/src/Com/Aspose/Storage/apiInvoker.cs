@@ -104,6 +104,7 @@ namespace Com.Aspose.Storage
             // Remove invalid symbols.
             signature = signature.TrimEnd('=');
             signature = HttpUtility.UrlEncode(signature);
+            signature = signature.Replace("%","");
 
             // Convert codes to upper case as they can be updated automatically.
             signature = Regex.Replace(signature, "%[0-9a-f]{2}", e => e.Value.ToUpper());
@@ -160,6 +161,8 @@ namespace Com.Aspose.Storage
 
             path = Sign(host + path, this.defaultHeaderMap[API_KEY]);
 
+            
+
             var client = WebRequest.Create(path);
           client.Method = method;
 
@@ -197,6 +200,7 @@ namespace Com.Aspose.Storage
                   client.Headers.Add(defaultHeaderMapItem.Key, defaultHeaderMapItem.Value);
               }
           }
+          
           switch (method)
           {
               case "GET":
@@ -250,14 +254,19 @@ namespace Com.Aspose.Storage
           }
             catch (WebException ex)
           {
-              var response = ex.Response as HttpWebResponse;
+              var response = ex.Response as HttpWebResponse;              
               int statusCode = 0;
+              var bodyData = "" ;
               if (response != null)
               {
+                  using (var responseReader = new StreamReader(response.GetResponseStream()))
+                  {
+                       bodyData = responseReader.ReadToEnd();
+                  }
                   statusCode = (int)response.StatusCode;
                   response.Close();
               }
-              throw new ApiException(statusCode, ex.Message);
+              throw new ApiException(statusCode, ex.Message + "\r\n" + bodyData);
           }
       }
 
