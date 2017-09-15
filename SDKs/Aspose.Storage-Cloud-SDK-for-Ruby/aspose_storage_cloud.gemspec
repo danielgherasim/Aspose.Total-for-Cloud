@@ -1,6 +1,6 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path("../lib", __FILE__)
-require "aspose_storage_cloud/version"
+require "aspose_platform_cloud/version"
 
 Gem::Specification.new do |s|
   s.name        = "aspose_storage_cloud"
