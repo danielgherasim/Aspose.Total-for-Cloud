@@ -9,12 +9,12 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
 
     protected function setUp()
     {        
-        AsposeApp::$appSID = "B01A15E5-1B83-4B9A-8EB3-0F2BFA6AC766";
-        AsposeApp::$apiKey = "da77c9f5da014d91faf2961ecec2de66";
+        AsposeApp::$appSID = "";
+        AsposeApp::$apiKey = "";
         $this->storage = new StorageApi();
     }  
    
-    /*public function testDeleteFile()
+    public function testDeleteFile()
     {
         $result = $this->storage->DeleteFile($Path="info.txt", $versionId = null, $storage = null);        
         $this->assertEquals(200, $result->Code);
@@ -28,7 +28,8 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
     
     public function testGetDiscUsage()
     {
-        $result = $this->storage->GetDiscUsage($storage = null);        
+        $result = $this->storage->GetDiscUsage($storage = null);  
+        print_r($result);      
         $this->assertEquals(200, $result->Code);
     }
     
@@ -88,7 +89,7 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
     {
         $result = $this->storage->PutCopyFolder($Path="testing", $newdest="copy-testing", $versionId = null, $storage = null, $destStorage = null);
         $this->assertEquals(200, $result->Code);
-    }*/
+    }
     
     public function testPutCreate()
     {
@@ -97,10 +98,10 @@ class StorageApiTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals(200, $result->Code);
     }
     
-    /*public function testPutCreateFolder()
+    public function testPutCreateFolder()
     {
         $result = $this->storage->PutCreateFolder($Path="Testing123", $storage = null, $destStorage = null);
         $this->assertEquals(200, $result->Code);
-    }*/
+    }
                          
 }    
