@@ -103,8 +103,8 @@ namespace Com.Aspose.Storage
 
             // Remove invalid symbols.
             signature = signature.TrimEnd('=');
-            signature = HttpUtility.UrlEncode(signature);
-            signature = signature.Replace("%","");
+            //signature = HttpUtility.UrlEncode(signature);
+            //signature = signature.Replace("%","");
 
             // Convert codes to upper case as they can be updated automatically.
             signature = Regex.Replace(signature, "%[0-9a-f]{2}", e => e.Value.ToUpper());

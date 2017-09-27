@@ -12,7 +12,7 @@ var config = {'appSid':AppSID,'apiKey':AppKey , 'debug' : true};
 
 // Instantiate Aspose Storage API SDK
 var storageApi = new StorageApi(config);
-var name = 'testfile.txt';
+var name = 'Rendering.docx';
 try {	
 	storageApi.PutCreate(name, versionId=null, storage=null, file= data_path + name , function(responseMessage) {
 		assert.equal(responseMessage.status, 'OK', '');
