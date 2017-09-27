@@ -17,7 +17,7 @@ namespace StorageTest
         public TestStorageApi()
         {
 			//Please provide your AppSID and APIKey
-            target = new StorageApi("xxxx", "xxxx", "http://api.aspose.cloud/v1.1");
+            target = new StorageApi("059f9cdb8380772f174cb8deee73e1eb", "35649c7c-d695-451b-960e-18bffba11131", "http://api.aspose.cloud/v1.1");
         }
 
 
@@ -125,7 +125,7 @@ namespace StorageTest
         [TestMethod()]
         public void TestGetDownload()
         {
-            string Path = "testfile.txt"; 
+            string Path = "Rendering.docx"; 
             string versionId = null; 
             string storage = null;
 

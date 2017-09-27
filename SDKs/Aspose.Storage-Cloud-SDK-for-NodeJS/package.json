@@ -1,6 +1,6 @@
 {
   "name": "asposestoragecloud",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Aspose.Storage Cloud SDK for NodeJS",
   "main": "lib/StorageApi.js",
   "homepage": "http://www.aspose.com/cloud/total-api.aspx",

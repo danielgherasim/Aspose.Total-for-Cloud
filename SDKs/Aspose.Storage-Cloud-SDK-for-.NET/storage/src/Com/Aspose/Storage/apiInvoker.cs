@@ -108,7 +108,7 @@ namespace Com.Aspose.Storage
 
             // Convert codes to upper case as they can be updated automatically.
             signature = Regex.Replace(signature, "%[0-9a-f]{2}", e => e.Value.ToUpper());
-
+            //signature = Regex.Replace(signature, @"[^0-9a-zA-Z]+", "");
             // Add the signature to query string.
             return string.Format("{0}&signature={1}", uriBuilder.Uri.AbsoluteUri, signature);
         }

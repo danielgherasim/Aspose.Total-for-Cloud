@@ -40,7 +40,7 @@ namespace CSharp
             //DeleteFile.Run();
             //DeleteFileFromThirdPartyStorage.Run();
             //GetListFiles.Run();
-            //DownloadFile.Run();
+            DownloadFile.Run();
             //CheckFilePresence.Run();
             //MoveFile.Run();
             //CopyFile.Run();

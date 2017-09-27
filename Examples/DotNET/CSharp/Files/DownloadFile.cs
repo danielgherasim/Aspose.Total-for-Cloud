@@ -11,7 +11,7 @@ namespace Files
             // ExStart:1           
             StorageApi storageApi = new StorageApi(Common.APP_KEY, Common.APP_SID, Common.BASEPATH);
 
-            string Path = "testfile.txt";
+            string Path = "Rendering.docx";
             string versionId = null;
             string storage = null;            
             byte[] file = System.IO.File.ReadAllBytes(Common.GetDataDir() + Path);
