@@ -35,7 +35,7 @@ namespace CSharp
             //// =====================================================
             //// =====================================================
 
-            UploadFile.Run();
+            //UploadFile.Run();
             //UploadFileToThirdPartyStorage.Run();
             //DeleteFile.Run();
             //DeleteFileFromThirdPartyStorage.Run();
