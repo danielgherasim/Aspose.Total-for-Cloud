@@ -7,7 +7,7 @@ class Files
 
   def initialize
     # Get App key and App SID from https://cloud.aspose.com
-    AsposeApp.app_key_and_sid("8581cee5dcf1f68f378ff7b0fa63261d", "A87ADA7A-9A2A-403E-B4BE-2DB7F33BE289")
+    AsposeApp.app_key_and_sid("App Key", "App SID")
     @storage_api = StorageApi.new
   end
   
