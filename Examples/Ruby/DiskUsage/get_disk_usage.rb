@@ -7,7 +7,7 @@ class DiskUsage
 
   def initialize
     #Get App key and App SID from https://cloud.aspose.com
-    AsposeApp.app_key_and_sid("xxxx", "xxxx")
+    AsposeApp.app_key_and_sid("App Key", "App SID")
     @storage_api = StorageApi.new
   end
   
